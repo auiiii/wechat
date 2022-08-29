@@ -1,0 +1,99 @@
+{
+  "button": [
+    {
+      "name": "浪漫永驻",
+      "sub_button": [
+        {
+          "type": "click",
+          "name": "每日电影",
+          "key": "SHARE_MOVIE"
+        },
+        {
+          "type": "click",
+          "name": "每日歌单",
+          "key": "SHARE_MUSIC"
+        },
+        {
+          "type": "click",
+          "name": "推荐歌单",
+          "key": "SUBMIT_MUSIC"
+        },
+        {
+          "type": "click",
+          "name": "推荐电影",
+          "key": "SUBMIT_MOVIE"
+        },
+        {
+          "type": "view",
+          "name": "分享沙雕表情",
+          "url": "http://159.138.46.191:80/wechat/uploadUrl?name=沙雕"
+        }
+      ]
+    }
+  ],
+  "button": [
+    {
+      "name": "大千世界",
+      "sub_button": [
+        {
+          "type": "view",
+          "name": "拔剑自然神分区",
+          "url": "https://www.bilibili.com/v/dance/otaku"
+        },
+        {
+          "type": "view",
+          "name": "生于理想死于欲望",
+          "url": "https://movie.douban.com/"
+        },
+        {
+          "type": "view",
+          "name": "高质量人类交友区",
+          "url": "https://www.zhihu.com/"
+        },
+        {
+          "type": "view",
+          "name": "哥几个又来白嫖了",
+          "url": "https://www.yunbtv.net/"
+        },
+        {
+          "type": "view",
+          "name": "网抑云yyds",
+          "url": "https://music.163.com/#/playlist?id=7027990070"
+        }
+      ]
+    }],
+  "button": [
+    {
+      "name": "互动区域",
+      "sub_button": [
+        {
+          "type": "view",
+          "name": "请实名提交意见!",
+          "url": "http://159.138.46.191:80/wechat/hello"
+        },
+        {
+          "type": "scancode_push",
+          "name": "扫描二维码",
+          "key": "SCAN_CODE"
+        },
+        {
+          "type": "pic_photo_or_album",
+          "name": "整活图片上传",
+          "key": "MENU_PIC"
+        },
+        {
+          "type": "click",
+          "name": "申请友好互动",
+          "key": "MENU_DOG"
+        },
+        {
+          "type": "miniprogram",
+          "name": "王牌跑得快",
+          "url": "https://h5game.miko.cn",
+          "appid": "wxf12321412423412421",
+          "pagepath": ""
+        }
+      ]
+    }
+  ]
+}

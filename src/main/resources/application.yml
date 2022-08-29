@@ -1,0 +1,26 @@
+server:
+  port: 8185
+spring:
+  jersey:
+    application-path: zj
+  datasource:
+    url: jdbc:mysql://159.138.46.191:3306/wechat?useSSL=false&serverTimezone=UTC
+    username: wechat
+    password: fk6258077
+    driver-class-name: com.mysql.jdbc.Driver
+  mail:
+    username: 279976891@qq.com
+    password: zcmojevyvijxcbcg
+    host: smtp.qq.com
+mybatis:
+  # 指定 WeChatMediaInfoDao.xml 的位置
+  mapper-locations: classpath:mapper/*.xml
+  #扫描实体类的位置,在此处指明扫描实体类的包，在 WeChatMediaInfoDao.xml 中就可以不写实体类的全路径名
+  type-aliases-package: com.zj.wechat.entity
+  configuration:
+    #默认开启驼峰命名法，可以不用设置该属性
+    map-underscore-to-camel-case: true
+cfg:
+  token: fk6258077zj
+  appId: wx0634de833b901930
+  appSecret: 2fbc2b70491fc6dec2144bd85aa97bbb

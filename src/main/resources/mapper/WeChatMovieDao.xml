@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zj.wechat.entity.WeChatMovieDao">
+
+    <resultMap id="BaseResultMap" type="com.zj.wechat.entity.WeChatMovie">
+        <!--@Table wechat_movie-->
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="title" column="title" jdbcType="VARCHAR"/>
+        <result property="movieUrl" column="movie_url" jdbcType="VARCHAR"/>
+        <result property="mediaId" column="mediaId" jdbcType="VARCHAR"/>
+        <result property="picUrl" column="pic_url" jdbcType="VARCHAR"/>
+        <result property="author" column="author" jdbcType="VARCHAR"/>
+        <result property="description" column="description" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="BaseResultMap">
+        select * from (select t1.* from wechat_movie t1 limit #{limit})t
+        <where>
+            <if test="keyWord != null and keyWord != ''">
+                and concat(ifnull(title, ''), ifnull(author, ''))
+                like "%"#{keyWord}"%"
+            </if>
+        </where>
+        order by id desc
+    </select>
+
+    <select id="queryByName" resultType="com.zj.wechat.entity.WeChatMusic">
+        select * from wechat_movie where title = #{title}
+    </select>
+
+    <select id="queryByRandom" resultMap="BaseResultMap">
+        SELECT * FROM wechat_movie
+            WHERE id >=
+            ((SELECT MAX(id) FROM wechat_movie)-(SELECT MIN(id) FROM wechat_movie)) * RAND() + (SELECT MIN(id) FROM wechat_movie)
+            LIMIT 1
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into wechat_movie(title, movie_url, pic_url, mediaId, author, description)
+        values (#{title}, #{movieUrl}, #{picUrl}, #{mediaId}, #{author}, #{description})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into wechat_movie(title, movie_url, pic_url, mediaId, author, description)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.title}, #{entity.movieUrl}, #{entity.picUrl}, #{entity.mediaId}, #{entity.author}, #{entity.description})
+        </foreach>
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update wechat_movie
+        <set>
+            <if test="title != null and title != ''">
+                title = #{title},
+            </if>
+            <if test="movieUrl != null and movieUrl != ''">
+                movie_url = #{movieUrl},
+            </if>
+            <if test="picUrl != null and picUrl != ''">
+                pic_url = #{picUrl},
+            </if>
+            <if test="author != null and author != ''">
+                author = #{author},
+            </if>
+            <if test="mediaId != null and mediaId != ''">
+                mediaId = #{mediaId},
+            </if>
+            <if test="description != null and description != ''">
+                description = #{description},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键批量删除-->
+    <delete id="deleteBatchByIds">
+        delete from wechat_movie where
+        <if test="ids != null and ids.size() > 0">id =
+            <foreach collection="ids" item="e" separator=" or id = ">#{e}</foreach>
+        </if>
+    </delete>
+
+</mapper>

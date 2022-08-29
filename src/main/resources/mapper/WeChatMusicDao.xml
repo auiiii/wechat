@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zj.wechat.entity.WeChatMusicDao">
+
+    <resultMap id="BaseResultMap" type="com.zj.wechat.entity.WeChatMusic">
+        <!--@Table wechat_music-->
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="title" column="title" jdbcType="VARCHAR"/>
+        <result property="musicUrl" column="music_url" jdbcType="VARCHAR"/>
+        <result property="author" column="author" jdbcType="VARCHAR"/>
+        <result property="description" column="description" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="BaseResultMap">
+        select * from (select t1.* from wechat_music t1 limit #{limit})t
+        <where>
+            <if test="keyWord != null and keyWord != ''">
+                and concat(ifnull(title, ''), ifnull(author, ''))
+                like "%"#{keyWord}"%"
+            </if>
+        </where>
+        order by id desc
+    </select>
+
+    <select id="queryByName" resultMap="BaseResultMap">
+        select * from wechat_music where title = #{title}
+    </select>
+
+    <select id="queryByRandom" resultMap="BaseResultMap">
+        SELECT * FROM wechat_music
+            WHERE id >=
+            ((SELECT MAX(id) FROM wechat_music)-(SELECT MIN(id) FROM wechat_music)) * RAND() + (SELECT MIN(id) FROM wechat_music)
+            LIMIT 1
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into wechat_music(title,music_url,author,description)
+        values (#{title}, #{musicUrl}, #{author}, #{description})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into wechat_music(title,music_url,author,description)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.title}, #{entity.musicUrl}, #{entity.author}, #{entity.description})
+        </foreach>
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update wechat_music
+        <set>
+            <if test="title != null and title != ''">
+                title = #{title},
+            </if>
+            <if test="musicUrl != null and musicUrl != ''">
+                music_url = #{musicUrl},
+            </if>
+            <if test="author != null and author != ''">
+                author = #{author},
+            </if>
+            <if test="description != null and description != ''">
+                description = #{description},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键批量删除-->
+    <delete id="deleteBatchByIds">
+        delete from wechat_music where
+        <if test="ids != null and ids.size() > 0">id =
+            <foreach collection="ids" item="e" separator=" or id = ">#{e}</foreach>
+        </if>
+    </delete>
+
+</mapper>
