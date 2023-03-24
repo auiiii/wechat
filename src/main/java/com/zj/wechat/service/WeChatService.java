@@ -1,7 +1,11 @@
 package com.zj.wechat.service;
 
+import cn.hutool.core.io.FileUtil;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.zj.wechat.entity.*;
+import com.zj.wechat.entity.gpr.GprChoice;
+import com.zj.wechat.entity.gpr.GprRsp;
 import com.zj.wechat.pojo.Constants;
 import com.zj.wechat.pojo.MsgEntity;
 import net.jodah.expiringmap.ExpirationPolicy;
@@ -49,6 +53,9 @@ public class WeChatService {
 
     @Value("${cfg.appSecret}")
     private String appSecret;
+
+    @Value("${cfg.gprToken}")
+    private String gprToken;
 
     @Resource
     private RestTemplate restTemplate;
@@ -206,5 +213,101 @@ public class WeChatService {
             result.add(news_item);
         }
         return result;
+    }
+
+    /**
+     * 基于参数提问生成doc
+     * @param map
+     * @return
+     */
+    public Map<String, Object> createDoc(Map<String, Object> map) {
+        String param = (String) map.get("param");
+        Map<String, Object> result = new HashMap<>();
+        List<String> list = new ArrayList<>();
+        String q1 = "英文写一篇3000个单词以上的" + "关于" + param + "的文章";
+        String q2 = "英文写世界上关于" + param + "的调查数据";
+        String q3 = "英文写人们对于"+ param +"的看法和态度";
+        String q4 = "英文写科学家对于"+ param +"的看法和态度";//字数不够预备
+        list.add(q1);
+        list.add(q2);
+        //list.add(q3);
+        //list.add(q4);
+        for (String question:list) {
+            getRspFromGpr(question,true);
+        }
+        return result;
+    }
+
+    /**
+     *
+     * @param question
+     */
+    private void getRspFromGpr(String question, Boolean isEnglish) {
+        Map<String,Object> reqBody = new HashMap<>();
+        reqBody.put("model", "gpt-3.5-turbo");
+        reqBody.put("max_tokens", 1300);
+        reqBody.put("top_p", 1);
+        reqBody.put("temperature", 0.5);
+        reqBody.put("frequency_penalty", 0);
+        reqBody.put("presence_penalty", 0);
+        reqBody.put("stream", true);
+        JSONArray arrayStop = new JSONArray();
+        arrayStop.add("ME:");
+        arrayStop.add("AI:");
+        reqBody.put("stop", arrayStop);
+        JSONArray arrayMsg = new JSONArray();
+        JSONObject messages = new JSONObject();
+        messages.put("role","user");
+        messages.put("content", question);
+        messages.put("name","ME");
+        arrayMsg.add(messages);
+        reqBody.put("messages", arrayMsg);
+
+        HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.add("Content-Type", "application/json");
+        httpHeaders.add("Content-Type", "application/json");
+        httpHeaders.add("authorization", gprToken);
+        httpHeaders.add("authority","cf-chat.zecoba.cn");
+        httpHeaders.add("origin","https://chat.zecoba.cn");
+        httpHeaders.add("referer","https://chat.zecoba.cn");
+        HttpEntity<String> httpEntity = new HttpEntity<>(JSONObject.toJSONString(reqBody), httpHeaders);
+        String fulltext = "";
+        String url = "https://cf-chat.zecoba.cn/v1/chat/completions";
+        ResponseEntity<String> responseEntity = restTemplate.postForEntity(url, httpEntity, String.class);
+        String body = responseEntity.getBody();
+        logger.debug(body);
+        if(null != body && !"".equals(body))
+        {
+            //不规则json段,拆分字符串
+            String a[] = body.split("content");
+            for (String aa:a) {
+                String flag = isEnglish? "\":\"" : "\": \"";
+                int index = isEnglish? 3:4;
+                if(aa.startsWith(flag))
+                {
+                    String b = aa.substring(index,aa.length()-1);
+                    String content = b.split("\"")[0];
+                    logger.info("content:" + content);
+                    if(null != content)
+                    {
+                        fulltext += content;
+                    }
+                }
+            }
+        }
+        logger.info("getting rsp from gpr done, fulltext is {}", fulltext);
+        if(null != fulltext)
+        {
+            fulltext = fulltext.replaceAll("\\n","");
+            String path = "C:\\Users\\zj\\Desktop\\zj.txt";
+            if(FileUtil.exist(path))
+            {
+                FileUtil.appendUtf8String(fulltext, path);
+            }
+            else
+            {
+                FileUtil.writeUtf8String(fulltext, path);
+            }
+        }
     }
 }

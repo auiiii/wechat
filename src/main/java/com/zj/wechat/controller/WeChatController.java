@@ -108,4 +108,26 @@ public class WeChatController {
             return "error";
         }
     }
+
+    /**
+     *  调用chatGpr生成一篇doc
+     * @param request
+     * @return
+     */
+    @PostMapping("chatGpr")
+    public R<?> handler(@RequestBody Map<String,Object> map)
+    {
+        logger.info("[IN-req]/wechat/chatGpr,reqBody is {}", JSONObject.toJSONString(map));
+        try
+        {
+            Map<String,Object> result = service.createDoc(map);
+            logger.info("[IN-rsp]/wechat/chatGpr");
+            return R.ok(result);
+        }
+        catch (Exception ex)
+        {
+            logger.error("", ex);
+            return R.fail();
+        }
+    }
 }
