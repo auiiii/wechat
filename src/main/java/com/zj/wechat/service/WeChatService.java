@@ -4,8 +4,6 @@ import cn.hutool.core.io.FileUtil;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.zj.wechat.entity.*;
-import com.zj.wechat.entity.gpr.GprChoice;
-import com.zj.wechat.entity.gpr.GprRsp;
 import com.zj.wechat.pojo.Constants;
 import com.zj.wechat.pojo.MsgEntity;
 import net.jodah.expiringmap.ExpirationPolicy;
@@ -222,6 +220,7 @@ public class WeChatService {
      */
     public Map<String, Object> createDoc(Map<String, Object> map) {
         String param = (String) map.get("param");
+        String token = (String) map.get("token");
         Map<String, Object> result = new HashMap<>();
         List<String> list = new ArrayList<>();
         String q1 = "英文写一篇3000个单词以上的" + "关于" + param + "的文章";
@@ -230,10 +229,12 @@ public class WeChatService {
         String q4 = "英文写科学家对于"+ param +"的看法和态度";//字数不够预备
         list.add(q1);
         list.add(q2);
-        //list.add(q3);
+        list.add(q3);
         //list.add(q4);
         for (String question:list) {
-            getRspFromGpr(question,true);
+            String path = getRspFromGpr(question,true, param, token);
+            result.put("path", path);
+            result.put("name", param);
         }
         return result;
     }
@@ -242,7 +243,8 @@ public class WeChatService {
      *
      * @param question
      */
-    private void getRspFromGpr(String question, Boolean isEnglish) {
+    private String getRspFromGpr(String question, Boolean isEnglish, String name, String token) {
+        String path = "";
         Map<String,Object> reqBody = new HashMap<>();
         reqBody.put("model", "gpt-3.5-turbo");
         reqBody.put("max_tokens", 1300);
@@ -266,7 +268,7 @@ public class WeChatService {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.add("Content-Type", "application/json");
         httpHeaders.add("Content-Type", "application/json");
-        httpHeaders.add("authorization", gprToken);
+        httpHeaders.add("authorization", token);
         httpHeaders.add("authority","cf-chat.zecoba.cn");
         httpHeaders.add("origin","https://chat.zecoba.cn");
         httpHeaders.add("referer","https://chat.zecoba.cn");
@@ -298,8 +300,8 @@ public class WeChatService {
         logger.info("getting rsp from gpr done, fulltext is {}", fulltext);
         if(null != fulltext)
         {
-            fulltext = fulltext.replaceAll("\\n","");
-            String path = "C:\\Users\\zj\\Desktop\\zj.txt";
+            fulltext = fulltext.replaceAll("\\n","").replaceAll("\\n\\n","");
+            path = "/home/zj/demo/article" + name +".txt";
             if(FileUtil.exist(path))
             {
                 FileUtil.appendUtf8String(fulltext, path);
@@ -309,5 +311,7 @@ public class WeChatService {
                 FileUtil.writeUtf8String(fulltext, path);
             }
         }
+        return path;
     }
+
 }
