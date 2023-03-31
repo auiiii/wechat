@@ -57,6 +57,13 @@ public class WeChatController {
         return "hello-myweb";
     }
 
+    @GetMapping("test")
+    public String hello(@RequestParam("name")String name)
+    {
+        return service.setRedis(name);
+    }
+
+
     /**
      * 获取token能力接口
      * @return

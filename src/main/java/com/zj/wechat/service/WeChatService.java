@@ -6,6 +6,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.zj.wechat.entity.*;
 import com.zj.wechat.pojo.Constants;
 import com.zj.wechat.pojo.MsgEntity;
+import com.zj.wechat.util.RedisUtils;
 import net.jodah.expiringmap.ExpirationPolicy;
 import net.jodah.expiringmap.ExpiringMap;
 import org.slf4j.Logger;
@@ -39,6 +40,9 @@ public class WeChatService {
 
     @Resource
     WeChatMediaInfoDao mediaInfoDao;
+
+    @Resource
+    private RedisUtils redisUtils;
 
     private final ExpiringMap<String, String> map = ExpiringMap.builder()
             .maxSize(1)
@@ -314,4 +318,8 @@ public class WeChatService {
         return path;
     }
 
+    public String setRedis(String name) {
+        redisUtils.set("wechat-test",name);
+        return "success";
+    }
 }

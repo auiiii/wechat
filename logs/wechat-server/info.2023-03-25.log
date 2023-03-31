@@ -1,0 +1,1441 @@
+21:26:05.255 [main] INFO  c.z.w.WeChatApplication - [logStarting,55] - Starting WeChatApplication using Java 1.8.0_91 on DESKTOP-341DNMO with PID 60552 (D:\code\wechat\target\classes started by zj in D:\code\wechat)
+21:26:05.257 [main] INFO  c.z.w.WeChatApplication - [logStartupProfileInfo,634] - No active profile set, falling back to 1 default profile: "default"
+21:26:06.008 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8185"]
+21:26:06.008 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:26:06.008 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.64]
+21:26:06.103 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:26:06.701 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8185"]
+21:26:06.721 [main] INFO  c.z.w.WeChatApplication - [logStarted,61] - Started WeChatApplication in 1.762 seconds (JVM running for 2.574)
+21:28:57.961 [http-nio-8185-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:29:01.584 [http-nio-8185-exec-6] INFO  c.z.w.c.WeChatController - [downloadDoc,148] - [IN-req]/wechat/downloadDoc
+21:29:26.710 [http-nio-8185-exec-4] INFO  c.z.w.c.WeChatController - [downloadDoc,148] - [IN-req]/wechat/downloadDoc
+21:29:27.087 [http-nio-8185-exec-4] INFO  c.z.w.c.WeChatController - [downloadDoc,182] - [IN-rsp]/wechat/downloadDoc
+21:33:11.674 [main] INFO  c.z.w.WeChatApplication - [logStarting,55] - Starting WeChatApplication using Java 1.8.0_91 on DESKTOP-341DNMO with PID 164704 (D:\code\wechat\target\classes started by zj in D:\code\wechat)
+21:33:11.681 [main] INFO  c.z.w.WeChatApplication - [logStartupProfileInfo,634] - No active profile set, falling back to 1 default profile: "default"
+21:33:12.330 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8185"]
+21:33:12.330 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:33:12.330 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.64]
+21:33:12.426 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:33:12.975 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8185"]
+21:33:12.985 [main] INFO  c.z.w.WeChatApplication - [logStarted,61] - Started WeChatApplication in 1.653 seconds (JVM running for 2.479)
+21:33:31.434 [http-nio-8185-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:33:31.556 [http-nio-8185-exec-1] INFO  c.z.w.c.WeChatController - [handler,127] - [IN-req]/wechat/chatGpr,reqBody is {"param":"风湿"}
+21:36:14.193 [main] INFO  c.z.w.WeChatApplication - [logStarting,55] - Starting WeChatApplication using Java 1.8.0_91 on DESKTOP-341DNMO with PID 66240 (D:\code\wechat\target\classes started by zj in D:\code\wechat)
+21:36:14.193 [main] INFO  c.z.w.WeChatApplication - [logStartupProfileInfo,634] - No active profile set, falling back to 1 default profile: "default"
+21:36:14.823 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8185"]
+21:36:14.823 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:36:14.823 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.64]
+21:36:14.918 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:36:15.407 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8185"]
+21:36:15.423 [main] INFO  c.z.w.WeChatApplication - [logStarted,61] - Started WeChatApplication in 1.489 seconds (JVM running for 2.151)
+21:36:31.415 [http-nio-8185-exec-3] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:36:31.494 [http-nio-8185-exec-3] INFO  c.z.w.c.WeChatController - [handler,126] - [IN-req]/wechat/chatGpr,reqBody is {"param":"风湿","token":"Bearer eyJraWQiOiJOREpXM05UTkI2MWlTQSs0SE41RW54Wk93WWtuYmpFRGVpQStxU01WSHN3PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2YmFkZTdjMy0xZTNiLTRlODEtYmZhMS00YWY1NDk4ZmZjYWIiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuYXAtbm9ydGhlYXN0LTEuYW1hem9uYXdzLmNvbVwvYXAtbm9ydGhlYXN0LTFfMXFwaXA2cnV2IiwiY29nbml0bzp1c2VybmFtZSI6InRtcng1d3llbW5kNmxqNjRnMXRydmQiLCJvcmlnaW5fanRpIjoiYjg3MmQ0NDQtM2NhOS00NWRlLTliNzItNzhkODgzMDdhYmE4IiwiYXVkIjoiMjAxcXBlZW11djdlMWhic3BhcDBwMmRjcTAiLCJldmVudF9pZCI6ImE0OWVhZDQwLWNlODEtNGQ5OC1hOGVjLTQxOTExNDVkMmU4OSIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjc5NjcyMDY1LCJwaG9uZV9udW1iZXIiOiIrODYxNzc4MzExNDM0OCIsImV4cCI6MTY3OTc1MjExMSwiaWF0IjoxNjc5NzQ4NTExLCJqdGkiOiJjYWUxNDAwOS1lODdkLTRhY2YtODQ2Mi0yMDRhNTcwN2RmN2YifQ.BqoGFwT5Al4WuaBgAUDIN3g6it0tzIK7m4h-qMk5mVvcfKoSxcISnbhSInz91S3nKlxx3xIhCDeC8NB0F_ji95f3uY2BdcWQCN-Y4lIA0gXRJRxL6JM1rZLuSkYHbkk7ObhqFPOUniGfZMvX4aO1cmcu3f-dP-mGeyjrh-UHro0SWkW5vsYSkb5ciOkqRmlSXYh69LkwNnTbwjTo2VRGMImbmiE14UEeOghqdxrMYijiO_T6Kg2kF3HvMmP90hbg61CDC9-zqTulhgBkBv5NJbHewCPvJwo2pUvOBdv0vdXnKGVUOrWcgZjiAQbhPBz4AmZFAAh_Qoj5cpq9-eRARA"}
+21:37:14.044 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:R
+21:37:14.044 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:he
+21:37:14.045 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.045 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.046 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: is
+21:37:14.046 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: a
+21:37:14.047 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: term
+21:37:14.047 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: used
+21:37:14.048 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:14.048 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: describe
+21:37:14.048 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: a
+21:37:14.049 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: group
+21:37:14.049 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.049 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: disorders
+21:37:14.050 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: that
+21:37:14.050 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: affect
+21:37:14.050 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.050 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: joints
+21:37:14.051 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.051 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: bones
+21:37:14.051 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.051 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.052 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: muscles
+21:37:14.052 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.052 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.052 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: body
+21:37:14.052 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:14.053 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: It
+21:37:14.053 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: is
+21:37:14.053 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: a
+21:37:14.053 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: chronic
+21:37:14.053 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: condition
+21:37:14.054 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: that
+21:37:14.054 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: can
+21:37:14.054 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: cause
+21:37:14.054 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: pain
+21:37:14.054 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.054 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: stiffness
+21:37:14.054 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.054 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.055 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: swelling
+21:37:14.055 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: in
+21:37:14.055 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.055 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: affected
+21:37:14.055 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: areas
+21:37:14.055 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:14.055 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Rhe
+21:37:14.055 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.056 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.056 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: can
+21:37:14.056 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: also
+21:37:14.056 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: lead
+21:37:14.056 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:14.056 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: other
+21:37:14.056 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: complications
+21:37:14.056 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: such
+21:37:14.056 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: as
+21:37:14.056 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: fatigue
+21:37:14.057 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.057 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: fever
+21:37:14.057 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.057 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.057 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: weight
+21:37:14.057 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: loss
+21:37:14.057 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:14.057 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: In
+21:37:14.057 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: this
+21:37:14.058 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: article
+21:37:14.058 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.058 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: we
+21:37:14.058 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: will
+21:37:14.058 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: discuss
+21:37:14.058 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.058 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: causes
+21:37:14.058 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.058 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: symptoms
+21:37:14.058 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.059 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.059 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: treatment
+21:37:14.059 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: options
+21:37:14.059 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: for
+21:37:14.059 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rhe
+21:37:14.059 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.059 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.059 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.\n\n
+21:37:14.059 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:Ca
+21:37:14.060 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:uses
+21:37:14.060 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.060 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Rhe
+21:37:14.060 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.060 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.060 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:\n\n
+21:37:14.060 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:The
+21:37:14.060 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: exact
+21:37:14.060 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: cause
+21:37:14.061 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.061 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rhe
+21:37:14.061 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.061 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.061 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: is
+21:37:14.061 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: unknown
+21:37:14.061 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.061 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: but
+21:37:14.061 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: it
+21:37:14.061 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: is
+21:37:14.062 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: thought
+21:37:14.062 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:14.062 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: be
+21:37:14.062 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: an
+21:37:14.062 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: autoimmune
+21:37:14.062 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: disorder
+21:37:14.063 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:14.063 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: This
+21:37:14.063 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: means
+21:37:14.063 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: that
+21:37:14.063 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.063 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: body
+21:37:14.064 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:'s
+21:37:14.064 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: immune
+21:37:14.064 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: system
+21:37:14.064 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: attacks
+21:37:14.064 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: its
+21:37:14.064 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: own
+21:37:14.064 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: tissues
+21:37:14.065 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.065 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: causing
+21:37:14.065 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: inflammation
+21:37:14.065 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.065 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: damage
+21:37:14.065 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:14.065 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Rhe
+21:37:14.065 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.065 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.065 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: can
+21:37:14.065 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: also
+21:37:14.066 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: be
+21:37:14.066 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: caused
+21:37:14.066 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: by
+21:37:14.066 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: genetics
+21:37:14.066 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.066 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: infections
+21:37:14.066 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.066 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.066 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: environmental
+21:37:14.066 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: factors
+21:37:14.067 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: such
+21:37:14.067 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: as
+21:37:14.067 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: smoking
+21:37:14.067 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.067 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: exposure
+21:37:14.067 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:14.067 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: certain
+21:37:14.067 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: chemicals
+21:37:14.068 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.\n\n
+21:37:14.068 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:Sym
+21:37:14.068 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ptoms
+21:37:14.068 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.068 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Rhe
+21:37:14.068 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.068 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.068 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:\n\n
+21:37:14.068 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:The
+21:37:14.068 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: symptoms
+21:37:14.068 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.068 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rhe
+21:37:14.069 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.069 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.069 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: can
+21:37:14.069 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: vary
+21:37:14.069 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: depending
+21:37:14.069 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: on
+21:37:14.069 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.069 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: type
+21:37:14.069 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.069 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: disorder
+21:37:14.070 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.070 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.070 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: severity
+21:37:14.070 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.070 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.070 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: condition
+21:37:14.070 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:14.070 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Some
+21:37:14.070 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: common
+21:37:14.071 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: symptoms
+21:37:14.071 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: include
+21:37:14.071 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content::\n\n
+21:37:14.071 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.071 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Pain
+21:37:14.072 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.072 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: stiffness
+21:37:14.072 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: in
+21:37:14.072 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.072 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: joints
+21:37:14.072 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.072 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: particularly
+21:37:14.073 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: in
+21:37:14.073 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.073 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: morning
+21:37:14.073 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: or
+21:37:14.073 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: after
+21:37:14.073 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: periods
+21:37:14.073 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.074 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: in
+21:37:14.074 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:activity
+21:37:14.074 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:\n
+21:37:14.074 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.074 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Sw
+21:37:14.074 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:elling
+21:37:14.074 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.075 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: tend
+21:37:14.075 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:erness
+21:37:14.075 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: in
+21:37:14.075 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.075 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: affected
+21:37:14.075 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: areas
+21:37:14.076 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:\n
+21:37:14.076 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.076 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Fat
+21:37:14.076 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:igue
+21:37:14.076 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.076 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: weakness
+21:37:14.076 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:\n
+21:37:14.076 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.076 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Fever
+21:37:14.077 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.077 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: weight
+21:37:14.077 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: loss
+21:37:14.077 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:\n
+21:37:14.077 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.077 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Difficulty
+21:37:14.077 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: moving
+21:37:14.077 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: or
+21:37:14.077 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: performing
+21:37:14.077 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: daily
+21:37:14.077 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: activities
+21:37:14.078 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:\n
+21:37:14.078 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.078 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: N
+21:37:14.078 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umb
+21:37:14.078 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ness
+21:37:14.078 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: or
+21:37:14.078 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: ting
+21:37:14.078 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ling
+21:37:14.078 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: in
+21:37:14.079 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.079 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: hands
+21:37:14.079 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: or
+21:37:14.079 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: feet
+21:37:14.079 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:\n
+21:37:14.079 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.079 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Red
+21:37:14.080 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ness
+21:37:14.080 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.080 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: warmth
+21:37:14.080 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: in
+21:37:14.080 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.081 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: affected
+21:37:14.081 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: areas
+21:37:14.081 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:\n\n
+21:37:14.081 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:Types
+21:37:14.082 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.082 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Rhe
+21:37:14.082 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.082 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.083 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:\n\n
+21:37:14.083 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:There
+21:37:14.083 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: are
+21:37:14.083 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: several
+21:37:14.083 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: different
+21:37:14.084 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: types
+21:37:14.084 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.084 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rhe
+21:37:14.084 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.084 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.084 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.084 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: each
+21:37:14.085 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: with
+21:37:14.085 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: its
+21:37:14.085 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: own
+21:37:14.085 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: set
+21:37:14.085 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.085 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: symptoms
+21:37:14.085 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.086 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: treatment
+21:37:14.086 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: options
+21:37:14.086 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:14.086 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Some
+21:37:14.086 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.086 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.086 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: most
+21:37:14.087 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: common
+21:37:14.087 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: types
+21:37:14.087 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: include
+21:37:14.087 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content::\n\n
+21:37:14.087 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.087 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: O
+21:37:14.087 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ste
+21:37:14.087 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:o
+21:37:14.087 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ar
+21:37:14.087 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:thritis
+21:37:14.087 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content::
+21:37:14.088 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: This
+21:37:14.088 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: is
+21:37:14.088 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.088 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: most
+21:37:14.088 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: common
+21:37:14.088 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: type
+21:37:14.088 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.088 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rhe
+21:37:14.088 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.088 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.088 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.088 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.089 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: it
+21:37:14.089 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: occurs
+21:37:14.089 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: when
+21:37:14.089 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.089 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: cart
+21:37:14.089 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ilage
+21:37:14.089 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: in
+21:37:14.089 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.089 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: joints
+21:37:14.089 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: breaks
+21:37:14.089 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: down
+21:37:14.089 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: over
+21:37:14.090 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: time
+21:37:14.090 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:14.090 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: This
+21:37:14.090 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: can
+21:37:14.090 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: cause
+21:37:14.090 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: pain
+21:37:14.090 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.090 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: stiffness
+21:37:14.090 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.090 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.090 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: swelling
+21:37:14.090 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: in
+21:37:14.091 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.091 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: affected
+21:37:14.091 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: areas
+21:37:14.091 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.\n
+21:37:14.091 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.091 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Rhe
+21:37:14.091 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.091 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:oid
+21:37:14.091 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: arthritis
+21:37:14.091 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content::
+21:37:14.092 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: This
+21:37:14.092 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: is
+21:37:14.092 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: an
+21:37:14.092 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: autoimmune
+21:37:14.092 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: disorder
+21:37:14.092 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: that
+21:37:14.092 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: causes
+21:37:14.092 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: inflammation
+21:37:14.092 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: in
+21:37:14.092 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.092 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: joints
+21:37:14.092 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.093 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: leading
+21:37:14.093 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:14.093 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: pain
+21:37:14.093 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.093 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: stiffness
+21:37:14.093 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.093 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.093 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: swelling
+21:37:14.093 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:14.093 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: It
+21:37:14.093 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: can
+21:37:14.094 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: also
+21:37:14.094 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: affect
+21:37:14.094 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: other
+21:37:14.094 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: parts
+21:37:14.094 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.094 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.094 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: body
+21:37:14.094 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: such
+21:37:14.095 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: as
+21:37:14.095 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.095 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: lungs
+21:37:14.095 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.095 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: heart
+21:37:14.095 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.\n
+21:37:14.096 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.096 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: G
+21:37:14.096 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:out
+21:37:14.096 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content::
+21:37:14.096 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: This
+21:37:14.096 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: is
+21:37:14.096 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: a
+21:37:14.096 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: type
+21:37:14.096 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.097 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: arthritis
+21:37:14.097 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: that
+21:37:14.097 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: occurs
+21:37:14.097 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: when
+21:37:14.097 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: ur
+21:37:14.097 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ic
+21:37:14.097 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: acid
+21:37:14.097 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: crystals
+21:37:14.097 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: build
+21:37:14.097 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: up
+21:37:14.097 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: in
+21:37:14.097 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.097 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: joints
+21:37:14.098 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.098 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: causing
+21:37:14.098 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: pain
+21:37:14.098 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.098 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: inflammation
+21:37:14.098 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.\n
+21:37:14.098 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.099 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Lup
+21:37:14.099 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:us
+21:37:14.099 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content::
+21:37:14.099 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: This
+21:37:14.099 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: is
+21:37:14.099 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: an
+21:37:14.099 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: autoimmune
+21:37:14.100 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: disorder
+21:37:14.100 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: that
+21:37:14.100 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: can
+21:37:14.100 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: affect
+21:37:14.100 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.100 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: joints
+21:37:14.100 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.100 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: skin
+21:37:14.101 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.101 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: kidneys
+21:37:14.101 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.101 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.101 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: other
+21:37:14.101 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: organs
+21:37:14.101 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:14.101 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: It
+21:37:14.102 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: can
+21:37:14.102 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: cause
+21:37:14.102 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: a
+21:37:14.102 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: range
+21:37:14.102 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.102 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: symptoms
+21:37:14.102 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: such
+21:37:14.102 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: as
+21:37:14.103 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: joint
+21:37:14.103 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: pain
+21:37:14.103 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.103 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: fatigue
+21:37:14.103 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.103 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.103 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: skin
+21:37:14.104 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: r
+21:37:14.104 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ashes
+21:37:14.104 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.\n
+21:37:14.104 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.104 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Fib
+21:37:14.104 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:rom
+21:37:14.104 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:yal
+21:37:14.105 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:gia
+21:37:14.105 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content::
+21:37:14.105 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: This
+21:37:14.105 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: is
+21:37:14.105 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: a
+21:37:14.105 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: chronic
+21:37:14.105 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: condition
+21:37:14.106 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: that
+21:37:14.106 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: causes
+21:37:14.106 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: widespread
+21:37:14.106 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: pain
+21:37:14.106 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.106 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: fatigue
+21:37:14.106 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.106 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.107 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: tend
+21:37:14.107 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:erness
+21:37:14.107 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: in
+21:37:14.107 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.107 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: muscles
+21:37:14.107 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.107 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: joints
+21:37:14.107 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.\n\n
+21:37:14.107 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:Treatment
+21:37:14.108 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Options
+21:37:14.108 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: for
+21:37:14.116 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Rhe
+21:37:14.116 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.116 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.116 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:\n\n
+21:37:14.116 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:The
+21:37:14.116 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: treatment
+21:37:14.116 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: options
+21:37:14.116 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: for
+21:37:14.116 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rhe
+21:37:14.117 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.117 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.117 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: depend
+21:37:14.117 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: on
+21:37:14.117 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.118 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: type
+21:37:14.118 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.118 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: disorder
+21:37:14.118 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.118 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.118 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: severity
+21:37:14.118 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.118 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.118 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: condition
+21:37:14.118 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:14.118 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Some
+21:37:14.118 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: common
+21:37:14.118 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: treatment
+21:37:14.118 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: options
+21:37:14.118 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: include
+21:37:14.118 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content::\n\n
+21:37:14.118 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.118 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Medic
+21:37:14.118 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ations
+21:37:14.120 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content::
+21:37:14.120 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: There
+21:37:14.120 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: are
+21:37:14.120 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: several
+21:37:14.120 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: different
+21:37:14.120 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: types
+21:37:14.120 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.120 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: medications
+21:37:14.120 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: that
+21:37:14.120 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: can
+21:37:14.120 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: be
+21:37:14.120 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: used
+21:37:14.120 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:14.121 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: treat
+21:37:14.121 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rhe
+21:37:14.121 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.121 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.121 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.121 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: including
+21:37:14.121 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: pain
+21:37:14.121 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: relie
+21:37:14.121 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:vers
+21:37:14.121 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.121 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: anti
+21:37:14.121 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-inflammatory
+21:37:14.121 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: drugs
+21:37:14.122 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.122 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.122 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: immun
+21:37:14.122 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:os
+21:37:14.122 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:up
+21:37:14.122 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:press
+21:37:14.122 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ants
+21:37:14.122 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.\n
+21:37:14.122 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.122 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Physical
+21:37:14.122 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: therapy
+21:37:14.122 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content::
+21:37:14.122 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: This
+21:37:14.123 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: can
+21:37:14.123 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: help
+21:37:14.123 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: improve
+21:37:14.123 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: mobility
+21:37:14.123 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.123 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: reduce
+21:37:14.123 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: pain
+21:37:14.123 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.123 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: stiffness
+21:37:14.123 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: in
+21:37:14.123 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.123 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: affected
+21:37:14.123 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: areas
+21:37:14.123 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.\n
+21:37:14.124 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.124 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Lifestyle
+21:37:14.124 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: changes
+21:37:14.124 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content::
+21:37:14.124 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Making
+21:37:14.124 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: changes
+21:37:14.124 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:14.124 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: your
+21:37:14.124 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: diet
+21:37:14.124 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.124 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: exercise
+21:37:14.124 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: routine
+21:37:14.124 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.124 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.125 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: other
+21:37:14.125 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: lifestyle
+21:37:14.125 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: factors
+21:37:14.125 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: can
+21:37:14.125 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: help
+21:37:14.125 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: improve
+21:37:14.125 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: your
+21:37:14.125 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: symptoms
+21:37:14.125 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.125 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: reduce
+21:37:14.125 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.125 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: risk
+21:37:14.125 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.126 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: complications
+21:37:14.126 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.\n
+21:37:14.126 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.126 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Surgery
+21:37:14.126 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content::
+21:37:14.126 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: In
+21:37:14.126 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: severe
+21:37:14.126 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: cases
+21:37:14.126 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.126 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: surgery
+21:37:14.126 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: may
+21:37:14.126 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: be
+21:37:14.126 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: necessary
+21:37:14.126 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:14.127 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: repair
+21:37:14.127 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: or
+21:37:14.127 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: replace
+21:37:14.127 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: damaged
+21:37:14.127 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: joints
+21:37:14.127 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.\n\n
+21:37:14.127 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:Pre
+21:37:14.127 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:venting
+21:37:14.127 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Rhe
+21:37:14.127 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.127 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.127 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:\n\n
+21:37:14.127 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:While
+21:37:14.127 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: there
+21:37:14.128 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: is
+21:37:14.128 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: no
+21:37:14.128 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: way
+21:37:14.128 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:14.128 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: completely
+21:37:14.128 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: prevent
+21:37:14.128 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rhe
+21:37:14.128 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.128 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.128 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.128 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: there
+21:37:14.128 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: are
+21:37:14.128 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: several
+21:37:14.128 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: things
+21:37:14.129 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: you
+21:37:14.129 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: can
+21:37:14.129 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: do
+21:37:14.129 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:14.129 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: reduce
+21:37:14.129 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: your
+21:37:14.129 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: risk
+21:37:14.129 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: developing
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: condition
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Some
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: tips
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: for
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: preventing
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rhe
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: include
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content::\n\n
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Maint
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:aining
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: a
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: healthy
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: weight
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:\n
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Ex
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:erc
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ising
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: regularly
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:\n
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Eating
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: a
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: healthy
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: diet
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:\n
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Avoid
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ing
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: smoking
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: excessive
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: alcohol
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: consumption
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:\n
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Managing
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: stress
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: levels
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:\n\n
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:Conclusion
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:\n\n
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:R
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:he
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: is
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: a
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: chronic
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: condition
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: that
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: can
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: cause
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: pain
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: stiffness
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: swelling
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: in
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: joints
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: bones
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: muscles
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: body
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: While
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: exact
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: cause
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rhe
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: is
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: unknown
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: it
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: is
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: thought
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: be
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: an
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: autoimmune
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: disorder
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: There
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: are
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: several
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: different
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: types
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rhe
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: each
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: with
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: its
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: own
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: set
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: symptoms
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: treatment
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: options
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: If
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: you
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: are
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: experiencing
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: symptoms
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rhe
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: it
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: is
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: important
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: speak
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: with
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: your
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: doctor
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: determine
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: best
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: course
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: treatment
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:14.130 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,307] - getting rsp from gpr done, fulltext is Rheumatism is a term used to describe a group of disorders that affect the joints, bones, and muscles of the body. It is a chronic condition that can cause pain, stiffness, and swelling in the affected areas. Rheumatism can also lead to other complications such as fatigue, fever, and weight loss. In this article, we will discuss the causes, symptoms, and treatment options for rheumatism.\n\nCauses of Rheumatism\n\nThe exact cause of rheumatism is unknown, but it is thought to be an autoimmune disorder. This means that the body's immune system attacks its own tissues, causing inflammation and damage. Rheumatism can also be caused by genetics, infections, and environmental factors such as smoking and exposure to certain chemicals.\n\nSymptoms of Rheumatism\n\nThe symptoms of rheumatism can vary depending on the type of disorder and the severity of the condition. Some common symptoms include:\n\n- Pain and stiffness in the joints, particularly in the morning or after periods of inactivity\n- Swelling and tenderness in the affected areas\n- Fatigue and weakness\n- Fever and weight loss\n- Difficulty moving or performing daily activities\n- Numbness or tingling in the hands or feet\n- Redness and warmth in the affected areas\n\nTypes of Rheumatism\n\nThere are several different types of rheumatism, each with its own set of symptoms and treatment options. Some of the most common types include:\n\n- Osteoarthritis: This is the most common type of rheumatism, and it occurs when the cartilage in the joints breaks down over time. This can cause pain, stiffness, and swelling in the affected areas.\n- Rheumatoid arthritis: This is an autoimmune disorder that causes inflammation in the joints, leading to pain, stiffness, and swelling. It can also affect other parts of the body such as the lungs and heart.\n- Gout: This is a type of arthritis that occurs when uric acid crystals build up in the joints, causing pain and inflammation.\n- Lupus: This is an autoimmune disorder that can affect the joints, skin, kidneys, and other organs. It can cause a range of symptoms such as joint pain, fatigue, and skin rashes.\n- Fibromyalgia: This is a chronic condition that causes widespread pain, fatigue, and tenderness in the muscles and joints.\n\nTreatment Options for Rheumatism\n\nThe treatment options for rheumatism depend on the type of disorder and the severity of the condition. Some common treatment options include:\n\n- Medications: There are several different types of medications that can be used to treat rheumatism, including pain relievers, anti-inflammatory drugs, and immunosuppressants.\n- Physical therapy: This can help improve mobility and reduce pain and stiffness in the affected areas.\n- Lifestyle changes: Making changes to your diet, exercise routine, and other lifestyle factors can help improve your symptoms and reduce the risk of complications.\n- Surgery: In severe cases, surgery may be necessary to repair or replace damaged joints.\n\nPreventing Rheumatism\n\nWhile there is no way to completely prevent rheumatism, there are several things you can do to reduce your risk of developing the condition. Some tips for preventing rheumatism include:\n\n- Maintaining a healthy weight\n- Exercising regularly\n- Eating a healthy diet\n- Avoiding smoking and excessive alcohol consumption\n- Managing stress levels\n\nConclusion\n\nRheumatism is a chronic condition that can cause pain, stiffness, and swelling in the joints, bones, and muscles of the body. While the exact cause of rheumatism is unknown, it is thought to be an autoimmune disorder. There are several different types of rheumatism, each with its own set of symptoms and treatment options. If you are experiencing symptoms of rheumatism, it is important to speak with your doctor to determine the best course of treatment.
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:R
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:he
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:oid
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: arthritis
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: (
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:RA
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:)
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: affects
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: approximately
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: 
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:1
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:%
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: global
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: population
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: with
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: women
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: being
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: three
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: times
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: more
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: likely
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: develop
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: disease
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: than
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: men
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: The
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: prevalence
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: RA
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: varies
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: widely
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: across
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: different
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: regions
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: world
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: with
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: highest
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rates
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: reported
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: in
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: North
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: America
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Europe
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: \n\n
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:O
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ste
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:o
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ar
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:thritis
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: (
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:OA
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:)
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: is
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: most
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: common
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: form
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: arthritis
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: affecting
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: an
+21:37:29.854 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: estimated
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: 
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:10
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:%
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: men
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: 
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:13
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:%
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: women
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: over
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: age
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: 
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:60
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: worldwide
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: The
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: prevalence
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: OA
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: is
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: also
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: higher
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: in
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: developed
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: countries
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: particularly
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: in
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: North
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: America
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Europe
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: where
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rates
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: are
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: expected
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: increase
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: due
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: aging
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: populations
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rising
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: obesity
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rates
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: \n\n
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:System
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ic
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: lup
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:us
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: ery
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:them
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:atos
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:us
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: (
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:S
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:LE
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:)
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: is
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: a
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: chronic
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: autoimmune
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: disease
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: that
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: affects
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: multiple
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: organs
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: tissues
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: The
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: prevalence
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: S
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:LE
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: ranges
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: from
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: 
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:20
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: 
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:150
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: cases
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: per
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: 
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:100
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:000
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: individuals
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: with
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: higher
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rates
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: reported
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: in
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: women
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: certain
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: ethnic
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: groups
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: such
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: as
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: African
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Americans
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Hispanics
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: \n\n
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:G
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:out
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: is
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: a
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: type
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: arthritis
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: caused
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: by
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: buildup
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: ur
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ic
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: acid
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: crystals
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: in
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: joints
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: The
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: prevalence
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: g
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:out
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: has
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: been
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: increasing
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: globally
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: with
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: an
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: estimated
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: 
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:1
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:2
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:%
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: adult
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: population
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: affected
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Risk
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: factors
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: for
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: g
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:out
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: include
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: obesity
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: high
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: blood
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: pressure
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: a
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: diet
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: high
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: in
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: pur
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ines
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: \n\n
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:Overall
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: arthritis
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: is
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: a
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: major
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: public
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: health
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: concern
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: worldwide
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: with
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: significant
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: impacts
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: on
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: quality
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: life
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: healthcare
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: costs
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Effective
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: prevention
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: management
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: strategies
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: are
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: needed
+21:37:29.870 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:29.886 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: address
+21:37:29.886 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:29.886 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: growing
+21:37:29.886 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: burden
+21:37:29.886 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:29.886 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: these
+21:37:29.886 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: conditions
+21:37:29.886 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:29.886 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,307] - getting rsp from gpr done, fulltext is Rheumatoid arthritis (RA) affects approximately 1% of the global population, with women being three times more likely to develop the disease than men. The prevalence of RA varies widely across different regions of the world, with the highest rates reported in North America and Europe. \n\nOsteoarthritis (OA) is the most common form of arthritis, affecting an estimated 10% of men and 13% of women over the age of 60 worldwide. The prevalence of OA is also higher in developed countries, particularly in North America and Europe, where rates are expected to increase due to aging populations and rising obesity rates. \n\nSystemic lupus erythematosus (SLE) is a chronic autoimmune disease that affects multiple organs and tissues. The prevalence of SLE ranges from 20 to 150 cases per 100,000 individuals, with higher rates reported in women and certain ethnic groups, such as African Americans and Hispanics. \n\nGout is a type of arthritis caused by the buildup of uric acid crystals in the joints. The prevalence of gout has been increasing globally, with an estimated 1-2% of the adult population affected. Risk factors for gout include obesity, high blood pressure, and a diet high in purines. \n\nOverall, arthritis is a major public health concern worldwide, with significant impacts on quality of life and healthcare costs. Effective prevention and management strategies are needed to address the growing burden of these conditions.
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:People
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:'s
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: attitudes
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: perceptions
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: towards
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rhe
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: vary
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: widely
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Some
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: people
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: view
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rhe
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: as
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: a
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: minor
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: inconvenience
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: that
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: can
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: be
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: easily
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: managed
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: with
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: over
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-the
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:-counter
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: pain
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: relie
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:vers
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: or
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: natural
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: remedies
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: Others
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: however
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: see
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: it
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: as
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: a
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: debilitating
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: condition
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: that
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: can
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: severely
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: impact
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: their
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: quality
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: life
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.\n\n
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:Many
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: people
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: who
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: suffer
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: from
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rhe
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: feel
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: frustrated
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: misunderstood
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: by
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: those
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: who
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: don
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:'t
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: experience
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: same
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: level
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: of
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: pain
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: discomfort
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: They
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: may
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: feel
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: dismissed
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: or
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: bel
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:itt
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:led
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: when
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: others
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: suggest
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: that
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: they
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: simply
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: need
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: \
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:push
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: through
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:\
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: pain
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: or
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: \
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:take
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: it
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: easy
+21:37:42.260 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:\
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: for
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: a
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: while
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.\n\n
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:On
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: other
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: hand
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: there
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: are
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: also
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: many
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: people
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: who
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: are
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: compassionate
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: empath
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:etic
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: towards
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: those
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: with
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rhe
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: They
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: understand
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: challenges
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: that
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: come
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: with
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: condition
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: are
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: willing
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: offer
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: support
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: assistance
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: as
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: needed
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.\n\n
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:Overall
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: attitudes
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: towards
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rhe
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: are
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: complex
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: multif
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ac
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:eted
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: While
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: some
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: people
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: may
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: view
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: it
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: as
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: a
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: minor
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: inconvenience
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:,
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: others
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: understand
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: the
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: significant
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: impact
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: it
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: can
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: have
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: on
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: a
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: person
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:'s
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: life
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:42.274 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: It
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: is
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: important
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: for
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: everyone
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: be
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: educated
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: about
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: rhe
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:umat
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:ism
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: to
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: show
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: compassion
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: and
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: understanding
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: towards
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: those
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: who
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: are
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: affected
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: by
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content: it
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,299] - content:.
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.s.WeChatService - [getRspFromGpr,307] - getting rsp from gpr done, fulltext is People's attitudes and perceptions towards rheumatism vary widely. Some people view rheumatism as a minor inconvenience that can be easily managed with over-the-counter pain relievers or natural remedies. Others, however, see it as a debilitating condition that can severely impact their quality of life.\n\nMany people who suffer from rheumatism feel frustrated and misunderstood by those who don't experience the same level of pain and discomfort. They may feel dismissed or belittled when others suggest that they simply need to \push through\ the pain or \take it easy\ for a while.\n\nOn the other hand, there are also many people who are compassionate and empathetic towards those with rheumatism. They understand the challenges that come with the condition and are willing to offer support and assistance as needed.\n\nOverall, attitudes towards rheumatism are complex and multifaceted. While some people may view it as a minor inconvenience, others understand the significant impact it can have on a person's life. It is important for everyone to be educated about rheumatism and to show compassion and understanding towards those who are affected by it.
+21:37:42.290 [http-nio-8185-exec-3] INFO  c.z.w.c.WeChatController - [handler,130] - [IN-rsp]/wechat/chatGpr
+21:38:34.907 [main] INFO  c.z.w.WeChatApplication - [logStarting,55] - Starting WeChatApplication using Java 1.8.0_91 on DESKTOP-341DNMO with PID 183232 (D:\code\wechat\target\classes started by zj in D:\code\wechat)
+21:38:34.909 [main] INFO  c.z.w.WeChatApplication - [logStartupProfileInfo,634] - No active profile set, falling back to 1 default profile: "default"
+21:38:35.531 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8185"]
+21:38:35.531 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:38:35.531 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.64]
+21:38:35.617 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:38:36.105 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8185"]
+21:38:36.124 [main] INFO  c.z.w.WeChatApplication - [logStarted,61] - Started WeChatApplication in 1.461 seconds (JVM running for 2.116)
+21:46:58.767 [main] INFO  c.z.w.WeChatApplication - [logStarting,55] - Starting WeChatApplication using Java 1.8.0_91 on DESKTOP-341DNMO with PID 116680 (D:\code\wechat\target\classes started by zj in D:\code\wechat)
+21:46:58.770 [main] INFO  c.z.w.WeChatApplication - [logStartupProfileInfo,634] - No active profile set, falling back to 1 default profile: "default"
+21:46:59.464 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8185"]
+21:46:59.466 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:46:59.466 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.64]
+21:46:59.551 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:47:00.090 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8185"]
+21:47:00.115 [main] INFO  c.z.w.WeChatApplication - [logStarted,61] - Started WeChatApplication in 1.661 seconds (JVM running for 2.322)
+21:47:17.853 [http-nio-8185-exec-4] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:47:17.920 [http-nio-8185-exec-4] INFO  c.z.w.c.WeChatController - [downloadDoc,147] - [IN-req]/wechat/downloadDoc
+21:47:18.265 [http-nio-8185-exec-4] INFO  c.z.w.c.WeChatController - [downloadDoc,180] - [IN-rsp]/wechat/downloadDoc
+21:51:46.457 [main] INFO  c.z.w.WeChatApplication - [logStarting,55] - Starting WeChatApplication using Java 1.8.0_91 on DESKTOP-341DNMO with PID 14912 (D:\code\wechat\target\classes started by zj in D:\code\wechat)
+21:51:46.459 [main] INFO  c.z.w.WeChatApplication - [logStartupProfileInfo,634] - No active profile set, falling back to 1 default profile: "default"
+21:51:47.108 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8185"]
+21:51:47.108 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:51:47.108 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.64]
+21:51:47.194 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:51:47.741 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8185"]
+21:51:47.762 [main] INFO  c.z.w.WeChatApplication - [logStarted,61] - Started WeChatApplication in 1.553 seconds (JVM running for 2.231)
+21:51:52.587 [http-nio-8185-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:51:52.633 [http-nio-8185-exec-1] INFO  c.z.w.c.WeChatController - [downloadDoc,147] - [IN-req]/wechat/downloadDoc
+21:51:52.855 [http-nio-8185-exec-1] INFO  c.z.w.c.WeChatController - [downloadDoc,180] - [IN-rsp]/wechat/downloadDoc
+21:52:58.378 [main] INFO  c.z.w.WeChatApplication - [logStarting,55] - Starting WeChatApplication using Java 1.8.0_91 on DESKTOP-341DNMO with PID 134508 (D:\code\wechat\target\classes started by zj in D:\code\wechat)
+21:52:58.380 [main] INFO  c.z.w.WeChatApplication - [logStartupProfileInfo,634] - No active profile set, falling back to 1 default profile: "default"
+21:52:59.073 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8185"]
+21:52:59.074 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:52:59.074 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.64]
+21:52:59.170 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:52:59.690 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8185"]
+21:52:59.709 [main] INFO  c.z.w.WeChatApplication - [logStarted,61] - Started WeChatApplication in 1.687 seconds (JVM running for 2.547)
+21:53:05.125 [http-nio-8185-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:53:05.173 [http-nio-8185-exec-1] INFO  c.z.w.c.WeChatController - [downloadDoc,147] - [IN-req]/wechat/downloadDoc
+21:53:05.378 [http-nio-8185-exec-1] INFO  c.z.w.c.WeChatController - [downloadDoc,180] - [IN-rsp]/wechat/downloadDoc
+21:53:46.168 [http-nio-8185-exec-5] INFO  c.z.w.c.WeChatController - [downloadDoc,147] - [IN-req]/wechat/downloadDoc
+21:53:46.181 [http-nio-8185-exec-5] INFO  c.z.w.c.WeChatController - [downloadDoc,180] - [IN-rsp]/wechat/downloadDoc
+21:56:13.188 [main] INFO  c.z.w.WeChatApplication - [logStarting,55] - Starting WeChatApplication using Java 1.8.0_91 on DESKTOP-341DNMO with PID 120664 (D:\code\wechat\target\classes started by zj in D:\code\wechat)
+21:56:13.192 [main] INFO  c.z.w.WeChatApplication - [logStartupProfileInfo,634] - No active profile set, falling back to 1 default profile: "default"
+21:56:13.840 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8185"]
+21:56:13.841 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:56:13.841 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.64]
+21:56:13.925 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:56:14.411 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8185"]
+21:56:14.429 [main] INFO  c.z.w.WeChatApplication - [logStarted,61] - Started WeChatApplication in 1.522 seconds (JVM running for 2.219)
+21:56:16.712 [http-nio-8185-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:56:16.759 [http-nio-8185-exec-1] INFO  c.z.w.c.WeChatController - [downloadDoc,147] - [IN-req]/wechat/downloadDoc
+21:56:16.979 [http-nio-8185-exec-1] INFO  c.z.w.c.WeChatController - [downloadDoc,181] - [IN-rsp]/wechat/downloadDoc
+21:56:33.014 [main] INFO  c.z.w.WeChatApplication - [logStarting,55] - Starting WeChatApplication using Java 1.8.0_91 on DESKTOP-341DNMO with PID 131892 (D:\code\wechat\target\classes started by zj in D:\code\wechat)
+21:56:33.016 [main] INFO  c.z.w.WeChatApplication - [logStartupProfileInfo,634] - No active profile set, falling back to 1 default profile: "default"
+21:56:33.671 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8185"]
+21:56:33.671 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:56:33.672 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.64]
+21:56:33.779 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:56:34.289 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8185"]
+21:56:34.309 [main] INFO  c.z.w.WeChatApplication - [logStarted,61] - Started WeChatApplication in 1.549 seconds (JVM running for 2.209)
+21:56:43.787 [http-nio-8185-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:56:43.879 [http-nio-8185-exec-1] INFO  c.z.w.c.WeChatController - [downloadDoc,147] - [IN-req]/wechat/downloadDoc
+21:56:44.252 [http-nio-8185-exec-1] INFO  c.z.w.c.WeChatController - [downloadDoc,181] - [IN-rsp]/wechat/downloadDoc
+21:58:27.773 [main] INFO  c.z.w.WeChatApplication - [logStarting,55] - Starting WeChatApplication using Java 1.8.0_91 on DESKTOP-341DNMO with PID 73180 (D:\code\wechat\target\classes started by zj in D:\code\wechat)
+21:58:27.775 [main] INFO  c.z.w.WeChatApplication - [logStartupProfileInfo,634] - No active profile set, falling back to 1 default profile: "default"
+21:58:28.434 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8185"]
+21:58:28.435 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:58:28.435 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.64]
+21:58:28.531 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:58:29.081 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8185"]
+21:58:29.101 [main] INFO  c.z.w.WeChatApplication - [logStarted,61] - Started WeChatApplication in 1.581 seconds (JVM running for 2.266)
+21:58:30.165 [http-nio-8185-exec-4] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:58:30.212 [http-nio-8185-exec-4] INFO  c.z.w.c.WeChatController - [downloadDoc,147] - [IN-req]/wechat/downloadDoc
+21:58:30.430 [http-nio-8185-exec-4] INFO  c.z.w.c.WeChatController - [downloadDoc,181] - [IN-rsp]/wechat/downloadDoc
+22:01:20.774 [main] INFO  c.z.w.WeChatApplication - [logStarting,55] - Starting WeChatApplication using Java 1.8.0_91 on DESKTOP-341DNMO with PID 128304 (D:\code\wechat\target\classes started by zj in D:\code\wechat)
+22:01:20.776 [main] INFO  c.z.w.WeChatApplication - [logStartupProfileInfo,634] - No active profile set, falling back to 1 default profile: "default"
+22:01:21.462 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8185"]
+22:01:21.463 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+22:01:21.463 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.64]
+22:01:21.556 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+22:01:22.145 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8185"]
+22:01:22.164 [main] INFO  c.z.w.WeChatApplication - [logStarted,61] - Started WeChatApplication in 1.651 seconds (JVM running for 2.429)
+22:01:24.403 [http-nio-8185-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:01:24.446 [http-nio-8185-exec-2] INFO  c.z.w.c.WeChatController - [downloadDoc,147] - [IN-req]/wechat/downloadDoc
+22:01:24.666 [http-nio-8185-exec-2] INFO  c.z.w.c.WeChatController - [downloadDoc,180] - [IN-rsp]/wechat/downloadDoc
+22:01:57.876 [main] INFO  c.z.w.WeChatApplication - [logStarting,55] - Starting WeChatApplication using Java 1.8.0_91 on DESKTOP-341DNMO with PID 87172 (D:\code\wechat\target\classes started by zj in D:\code\wechat)
+22:01:57.878 [main] INFO  c.z.w.WeChatApplication - [logStartupProfileInfo,634] - No active profile set, falling back to 1 default profile: "default"
+22:01:58.516 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8185"]
+22:01:58.516 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+22:01:58.516 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.64]
+22:01:58.616 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+22:01:59.116 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8185"]
+22:01:59.134 [main] INFO  c.z.w.WeChatApplication - [logStarted,61] - Started WeChatApplication in 1.506 seconds (JVM running for 2.201)

@@ -1,5 +1,7 @@
 package com.zj.wechat.entity;
 
+import java.util.Objects;
+
 public class WeChatMusic {
     private Long id;
     private String title;
