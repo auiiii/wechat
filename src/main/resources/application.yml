@@ -23,10 +23,27 @@ spring:
   jersey:
     application-path: zj
   datasource:
-    url: jdbc:mysql://159.138.46.191:3306/wechat?useSSL=false&serverTimezone=UTC
-    username: wechat
-    password: fk6258077
-    driver-class-name: com.mysql.jdbc.Driver
+    dynamic:
+      p6spy: false
+      lazy: true
+      druid:
+        initial-size: 5
+        max-active: 8
+        min-idle: 3
+        max-wait: 1000
+        validation-query: 'select 1 from dual'
+      #primary默认读取master命名的,只要不乱取名即可
+      datasource:
+        master:
+           url: jdbc:mysql://159.138.46.191:3306/wechat?useSSL=false&serverTimezone=UTC
+           username: wechat
+           password: fk6258077
+           driver-class-name: com.mysql.jdbc.Driver
+        slave:
+           url: jdbc:mysql://39.98.210.246:3306/wechat-slave?useSSL=false&serverTimezone=UTC
+           username: wechat-slave
+           password: fk6258077
+           driver-class-name: com.mysql.jdbc.Driver
   mail:
     username: 279976891@qq.com
     password: zcmojevyvijxcbcg
@@ -44,3 +61,10 @@ cfg:
   appId: wx0634de833b901930
   appSecret: 2fbc2b70491fc6dec2144bd85aa97bbb
   gprToken: Bearer eyJraWQiOiJOREpXM05UTkI2MWlTQSs0SE41RW54Wk93WWtuYmpFRGVpQStxU01WSHN3PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2YmFkZTdjMy0xZTNiLTRlODEtYmZhMS00YWY1NDk4ZmZjYWIiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuYXAtbm9ydGhlYXN0LTEuYW1hem9uYXdzLmNvbVwvYXAtbm9ydGhlYXN0LTFfMXFwaXA2cnV2IiwiY29nbml0bzp1c2VybmFtZSI6InRtcng1d3llbW5kNmxqNjRnMXRydmQiLCJvcmlnaW5fanRpIjoiYjg3MmQ0NDQtM2NhOS00NWRlLTliNzItNzhkODgzMDdhYmE4IiwiYXVkIjoiMjAxcXBlZW11djdlMWhic3BhcDBwMmRjcTAiLCJldmVudF9pZCI6ImE0OWVhZDQwLWNlODEtNGQ5OC1hOGVjLTQxOTExNDVkMmU4OSIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjc5NjcyMDY1LCJwaG9uZV9udW1iZXIiOiIrODYxNzc4MzExNDM0OCIsImV4cCI6MTY3OTY3OTg2OSwiaWF0IjoxNjc5Njc2MjY5LCJqdGkiOiJmMzRhYzUwYi0yYmI2LTQ2NmMtOTM1OC1iMGIyMDlmODFjOTkifQ.YSlidh4nLJDwYwp2QCYmPsER5wFfOHABycVIC5L6aC4rxMOyOEXl4PvWNlI9FHUQmv9owmgiqIME-GClJZ7dMLa8GCf1T5Imh2uNmSL2nYBdHMJvcfP_uj6wmZVGLXbpcCanUcMYSGok4KKzLbkoySsgGbLfjOgmSsY_hhtUR-VCD2AfMvF92vMIp7wB41mXjBzwjhGj9f0cGxpTxEya1m4OMLHDYozoknOAv0sqbzlygNEgm3_w9WguRV7_cWCy5gAIPFYt4FODU2GKzJNJ2AotIYKgKG2TpRVEGbljvh9hkJpbGRCeSGJwfzN7s9dQEqoluoypAOTeKU0HSBeGUA
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: FULL

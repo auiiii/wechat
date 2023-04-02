@@ -11,14 +11,16 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
-import java.util.Arrays;
 
-@Configuration
+/**
+ * 多数据源时屏蔽该配置类，不用指定给springboot了
+ */
+//@Configuration
 public class DataSourceConfig {
 
     //对象映射配置文件
-    @ConfigurationProperties("spring.datasource")
-    @Bean
+    //@ConfigurationProperties("spring.datasource")
+    //@Bean
     public DataSource getDataSource() throws SQLException {
         DruidDataSource druidDataSource = new DruidDataSource();
         //设置filters属性值为stat,开启SQL监控

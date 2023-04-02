@@ -6,6 +6,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.zj.wechat.entity.*;
 import com.zj.wechat.pojo.Constants;
 import com.zj.wechat.pojo.MsgEntity;
+import com.zj.wechat.rpc.TestFeign;
 import com.zj.wechat.util.RedisUtils;
 import net.jodah.expiringmap.ExpirationPolicy;
 import net.jodah.expiringmap.ExpiringMap;
@@ -44,6 +45,9 @@ public class WeChatService {
     @Resource
     private RedisUtils redisUtils;
 
+    @Resource
+    private TestFeign testFeign;
+
     private final ExpiringMap<String, String> map = ExpiringMap.builder()
             .maxSize(1)
             .expirationPolicy(ExpirationPolicy.ACCESSED)
@@ -59,7 +63,7 @@ public class WeChatService {
     @Value("${cfg.gprToken}")
     private String gprToken;
 
-    @Resource
+    @Resource(name = "restTemplate")
     private RestTemplate restTemplate;
 
     @Resource
@@ -321,5 +325,9 @@ public class WeChatService {
     public String setRedis(String name) {
         redisUtils.set("wechat-test",name);
         return "success";
+    }
+
+    public String testRpc(String name) {
+        return JSONObject.toJSONString(testFeign.process());
     }
 }

@@ -1,0 +1,32 @@
+# Spring
+spring:
+  application:
+    # 应用名称
+    name: wechat
+  profiles:
+    # 环境配置
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        namespace: 8e90b9f9-ea44-4c23-9eff-fbd62d5fe134
+        group: DEV
+        username: nacos
+        password: nacos@SmartCity2022
+        # 服务注册地址
+        server-addr: 47.108.185.172:8848
+      config:
+        namespace: 8e90b9f9-ea44-4c23-9eff-fbd62d5fe134
+        group: DEV
+        username: nacos
+        password: nacos@SmartCity2022
+        # 配置中心地址
+        server-addr: 47.108.185.172:8848
+        # 配置文件格式
+        file-extension: yml
+        # 共享配置
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+        # extension-configs[0]:
+        #   group: DEV
+        #   data-id:

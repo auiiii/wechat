@@ -63,6 +63,11 @@ public class WeChatController {
         return service.setRedis(name);
     }
 
+    @GetMapping("testRpc")
+    public String testRpc(@RequestParam("name")String name)
+    {
+        return service.testRpc(name);
+    }
 
     /**
      * 获取token能力接口

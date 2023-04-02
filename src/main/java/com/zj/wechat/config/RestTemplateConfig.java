@@ -1,5 +1,6 @@
 package com.zj.wechat.config;
 
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
@@ -12,10 +13,28 @@ import org.springframework.web.client.RestTemplate;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ */
 @Configuration
 public class RestTemplateConfig {
-    @Bean
+
+    /**
+     * 集成cloud-LoadBalanced后会破坏正常调用,重新定义一个解决
+     * @param factory
+     * @return
+     */
+    @Bean(value = "restTemplateWithLoad")
+    @LoadBalanced
     public RestTemplate restTemplate(ClientHttpRequestFactory factory){
+        RestTemplate restTemplate = new RestTemplate(simpleClientHttpRequestFactory());
+        //这个地方需要配置消息转换器，不然收到消息后转换会出现异常
+        restTemplate.setMessageConverters(getConverts());
+        return restTemplate;
+    }
+
+    @Bean(value = "restTemplate")
+    public RestTemplate restTemplate2(ClientHttpRequestFactory factory){
         RestTemplate restTemplate = new RestTemplate(simpleClientHttpRequestFactory());
         //这个地方需要配置消息转换器，不然收到消息后转换会出现异常
         restTemplate.setMessageConverters(getConverts());
