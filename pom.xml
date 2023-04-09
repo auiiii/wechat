@@ -84,6 +84,13 @@
             <artifactId>spring-cloud-starter-loadbalancer</artifactId>
         </dependency>
 
+        <!-- hystrix -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+            <version>2.2.10.RELEASE</version>
+        </dependency>
+
         <!-- bootstrap启动器, springboot2.4之后需要 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

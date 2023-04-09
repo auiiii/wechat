@@ -3,11 +3,13 @@ package com.zj.wechat.rpc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.openfeign.FallbackFactory;
+import org.springframework.stereotype.Component;
 
 
 /**
  * 熔断配置
  */
+@Component
 public class RemoteTestFactory implements FallbackFactory<TestFeign> {
 
     private static final Logger logger = LoggerFactory.getLogger(RemoteTestFactory.class);
