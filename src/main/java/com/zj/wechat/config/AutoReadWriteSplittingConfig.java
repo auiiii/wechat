@@ -30,6 +30,7 @@ public class AutoReadWriteSplittingConfig {
         patternMap.put("getCount*", "slave");
         patternMap.put("query*", "slave");
         patternMap.put("add*", "master");
+        patternMap.put("insert*", "slave");//模拟分布式事务
         patternMap.put("update*", "master");
         patternMap.put("delete*", "master");
         interceptor.addPatternMap(patternMap);

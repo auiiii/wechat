@@ -1,6 +1,7 @@
 package com.zj.wechat.service;
 
 import com.zj.wechat.entity.*;
+import io.seata.spring.annotation.GlobalTransactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -57,7 +58,10 @@ public class ResourceService {
         return musicDao.queryAll(limit, keyWord);
     }
 
+    @GlobalTransactional
     public void insertMovie(WeChatMovie body) throws Exception{
+        movieDao.add2Master(body);
+        //int i = 10/0;
         movieDao.insert(body);
     }
 

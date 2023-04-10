@@ -25,7 +25,7 @@ public class WeChatMovieController {
         LOGGER.info("[IN-req]/movie/add, req-body is:{}", JSONObject.toJSONString(body));
         try {
             service.insertMovie(body);
-            LOGGER.info("[IN-rsp]/music/add done");
+            LOGGER.info("[IN-rsp]/movie/add done");
             return R.ok();
         } catch (Exception e) {
             LOGGER.error("", e);

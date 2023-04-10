@@ -97,6 +97,12 @@
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
 
+        <!--seata 必备-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+        </dependency>
+
         <!-- 用默认的lettuce客户端 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

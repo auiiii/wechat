@@ -40,8 +40,8 @@ spring:
            password: fk6258077
            driver-class-name: com.mysql.jdbc.Driver
         slave:
-           url: jdbc:mysql://39.98.210.246:3306/wechat-slave?useSSL=false&serverTimezone=UTC
-           username: wechat-slave
+           url: jdbc:mysql://159.138.46.191:3307/wechat-slave?useSSL=false&serverTimezone=UTC
+           username: root
            password: fk6258077
            driver-class-name: com.mysql.jdbc.Driver
   mail:
@@ -70,3 +70,18 @@ feign:
         connectTimeout: 5000
         readTimeout: 5000
         loggerLevel: FULL
+seata:
+  registry:
+    type: file
+  config:
+    type: file
+  service:
+    vgroup-mapping:
+      default_tx_group: default
+    grouplist: #集群名称-seata地址
+      default: 159.138.46.191:8091
+    disable-global-transaction: false
+  application-id: wechat #项目名称,默认spring.application.name
+  tx-service-group: default_tx_group
+  enable-auto-data-source-proxy: true #可以不写,默认开启自动代理
+  data-source-proxy-mode: XA

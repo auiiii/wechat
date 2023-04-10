@@ -50,6 +50,11 @@
         </foreach>
     </insert>
 
+    <insert id="add2Master">
+     insert into wechat_movie(title, movie_url, pic_url, mediaId, author, description)
+        values (#{title}, #{movieUrl}, #{picUrl}, #{mediaId}, #{author}, #{description})
+    </insert>
+
     <!--通过主键修改数据-->
     <update id="update">
         update wechat_movie

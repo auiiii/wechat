@@ -5,6 +5,9 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface WeChatMovieDao {
+
+    int add2Master(WeChatMovie weChatMovie);
+
     int insert(WeChatMovie weChatMovie);
 
     int insertBatch(@Param("entities") List<WeChatMovie> entities);
