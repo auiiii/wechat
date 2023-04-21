@@ -21,6 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -206,4 +207,32 @@ public class WeChatController {
             }
         }
     }
+
+    /**
+     * zip压缩包示意
+     * @param response
+     * @param params
+     */
+    @PostMapping("downloadZip")
+    public void downloadFile(HttpServletResponse response, @RequestBody Map<String, Object> params)
+    {
+        logger.info("[IN-req]/wechat/downloadZip,req-body is:{}", JSONObject.toJSONString(params));
+        try
+        {
+            List<String> nameList = new ArrayList<>();
+            List<String> urls = (List<String>) params.get("urls");
+            for (String url:urls) {
+                String[] fileName = url.split("/");
+                nameList.add(fileName[fileName.length-1]);
+            }
+            //List<byte[]> list = service.getFileByteList(params);
+            //ZipOutUtils.toZip(response,list,nameList);
+            logger.info("[IN-rsp]/wechat/downloadZip done");
+        }
+        catch(Exception ex)
+        {
+            logger.error("",ex);
+        }
+    }
+
 }
