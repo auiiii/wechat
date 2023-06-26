@@ -58,10 +58,8 @@ public class ResourceService {
         return musicDao.queryAll(limit, keyWord);
     }
 
-    @GlobalTransactional
+    @GlobalTransactional//模拟
     public void insertMovie(WeChatMovie body) throws Exception{
-        movieDao.add2Master(body);
-        int i = 10/0;
         movieDao.insert(body);
     }
 
