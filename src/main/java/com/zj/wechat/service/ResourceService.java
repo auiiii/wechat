@@ -61,7 +61,7 @@ public class ResourceService {
     @GlobalTransactional
     public void insertMovie(WeChatMovie body) throws Exception{
         movieDao.add2Master(body);
-        //int i = 10/0;
+        int i = 10/0;
         movieDao.insert(body);
     }
 

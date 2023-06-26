@@ -40,8 +40,8 @@ spring:
            password: fk6258077
            driver-class-name: com.mysql.jdbc.Driver
         slave:
-           url: jdbc:mysql://159.138.46.191:3307/wechat-slave?useSSL=false&serverTimezone=UTC
-           username: root
+           url: jdbc:mysql://117.50.175.161:3307/wechat-slave?useSSL=false&serverTimezone=UTC
+           username: wechat-slave
            password: fk6258077
            driver-class-name: com.mysql.jdbc.Driver
   mail:
@@ -71,17 +71,31 @@ feign:
         readTimeout: 5000
         loggerLevel: FULL
 seata:
-  registry:
-    type: file
+  enabled: true
+  application-id: ${spring.application.name} #项目名称,默认spring.application.name
+  tx-service-group: default_tx_group
+  enable-auto-data-source-proxy: true #可以不写,默认开启自动代理
+  data-source-proxy-mode: AT #默认的就是AT
   config:
-    type: file
+    type: nacos
+    nacos:
+      namespace: 38dad4f3-1581-41a2-85ae-745d6734dc21
+      serverAddr: 117.50.175.161:8848
+      group: zjdev
+      userName: "nacos"
+      password: "nacos"
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: 117.50.175.161:8848
+      namespace: 38dad4f3-1581-41a2-85ae-745d6734dc21
+      group: zjdev
+      userName: "nacos"
+      password: "nacos"
+      cluster: default
   service:
     vgroup-mapping:
       default_tx_group: default
     grouplist: #集群名称-seata地址
-      default: 159.138.46.191:8091
-    disable-global-transaction: false
-  application-id: wechat #项目名称,默认spring.application.name
-  tx-service-group: default_tx_group
-  enable-auto-data-source-proxy: true #可以不写,默认开启自动代理
-  data-source-proxy-mode: XA
+      default: 117.50.175.161:8091

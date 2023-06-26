@@ -9,19 +9,19 @@ spring:
   cloud:
     nacos:
       discovery:
-        namespace: 8e90b9f9-ea44-4c23-9eff-fbd62d5fe134
-        group: DEV
+        namespace: 38dad4f3-1581-41a2-85ae-745d6734dc21
+        group: zjdev
         username: nacos
-        password: nacos@SmartCity2022
+        password: nacos
         # 服务注册地址
-        server-addr: 47.108.185.172:8848
+        server-addr: 117.50.175.161:8848
       config:
-        namespace: 8e90b9f9-ea44-4c23-9eff-fbd62d5fe134
-        group: DEV
+        namespace: 38dad4f3-1581-41a2-85ae-745d6734dc21
+        group: zjdev
         username: nacos
-        password: nacos@SmartCity2022
+        password: nacos
         # 配置中心地址
-        server-addr: 47.108.185.172:8848
+        server-addr: 117.50.175.161:8848
         # 配置文件格式
         file-extension: yml
         # 共享配置
