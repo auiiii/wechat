@@ -18,7 +18,7 @@
         <module>common</module>
         <module>wechat</module>
         <module>out-service</module>
-        <!--module>api</module-->
+        <module>api</module>
     </modules>
 
     <properties>

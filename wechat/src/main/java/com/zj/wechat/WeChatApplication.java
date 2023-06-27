@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @MapperScan(basePackages = "com.zj.wechat.entity")
 @EnableAsync
 @EnableDiscoveryClient
-@EnableFeignClients
+@EnableFeignClients(basePackages = {"com.zj"})
 @EnableHystrix
 public class WeChatApplication {
 

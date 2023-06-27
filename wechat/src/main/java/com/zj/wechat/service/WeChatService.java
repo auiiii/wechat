@@ -3,11 +3,12 @@ package com.zj.wechat.service;
 import cn.hutool.core.io.FileUtil;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.zj.api.feign.OutServiceFeign;
 import com.zj.wechat.entity.*;
 import com.zj.wechat.pojo.Constants;
 import com.zj.wechat.pojo.MsgEntity;
-import com.zj.wechat.rpc.TestFeign;
 import com.zj.wechat.util.RedisUtils;
+import io.seata.spring.annotation.GlobalTransactional;
 import net.jodah.expiringmap.ExpirationPolicy;
 import net.jodah.expiringmap.ExpiringMap;
 import org.slf4j.Logger;
@@ -43,10 +44,7 @@ public class WeChatService {
     WeChatMediaInfoDao mediaInfoDao;
 
     @Resource
-    private RedisUtils redisUtils;
-
-    @Resource
-    private TestFeign testFeign;
+    private OutServiceFeign outServiceFeign;
 
     private final ExpiringMap<String, String> map = ExpiringMap.builder()
             .maxSize(1)
@@ -322,12 +320,15 @@ public class WeChatService {
         return path;
     }
 
-    public String setRedis(String name) {
-        redisUtils.set("wechat-test",name);
-        return "success";
-    }
-
-    public String testRpc(String name) {
-        return JSONObject.toJSONString(testFeign.process());
+    @GlobalTransactional
+    public void process(String operation, String operator) {
+        WeChatMediaInfo test = new WeChatMediaInfo();
+        test.setMediaId("123");
+        test.setMediaType("1");
+        test.setName("at-test");
+        test.setUrl("123");
+        mediaInfoDao.insert(test);
+        Map<String, Object> process = outServiceFeign.process(operation, operator);
+        logger.info(JSONObject.toJSONString(process));
     }
 }

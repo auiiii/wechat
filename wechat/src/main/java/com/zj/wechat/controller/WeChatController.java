@@ -58,16 +58,12 @@ public class WeChatController {
         return "hello-myweb";
     }
 
-    @GetMapping("test")
-    public String hello(@RequestParam("name")String name)
-    {
-        return service.setRedis(name);
-    }
 
-    @GetMapping("testRpc")
-    public String testRpc(@RequestParam("name")String name)
+    @GetMapping("process")
+    public R<?> process(@RequestParam("operation")String operation, @RequestParam("operator")String operator)
     {
-        return service.testRpc(name);
+        service.process(operation,operator);
+        return R.ok();
     }
 
     /**

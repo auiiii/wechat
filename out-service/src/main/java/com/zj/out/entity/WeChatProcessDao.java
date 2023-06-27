@@ -7,7 +7,7 @@ public interface WeChatProcessDao {
 
     WeChatProcess query(Long id);
 
-    int insert(@Param("operation") String operation, @Param("operator") String operator);
+    int insert(WeChatProcess weChatProcess);
 
     int deleteBatchByIds(@Param("ids") List<Long> ids);
 
