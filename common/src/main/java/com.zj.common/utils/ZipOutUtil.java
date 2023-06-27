@@ -1,4 +1,4 @@
-package com.zj.wechat.util;
+package com.zj.common.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

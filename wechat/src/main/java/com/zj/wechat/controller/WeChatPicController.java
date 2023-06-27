@@ -1,7 +1,7 @@
 package com.zj.wechat.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.zj.wechat.entity.R;
+import com.zj.common.entity.R;
 import com.zj.wechat.entity.WeChatMediaInfo;
 import com.zj.wechat.service.ResourceService;
 import org.slf4j.Logger;

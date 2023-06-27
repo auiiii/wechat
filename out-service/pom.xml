@@ -10,16 +10,22 @@
     </parent>
 
     <groupId>com.zj</groupId>
-    <artifactId>wechat</artifactId>
-    <name>wechat</name>
-    <description>Demo project for Spring Boot</description>
+    <artifactId>outservice</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>out-service</name>
+    <description>out service for wechat-demo</description>
 
     <dependencies>
 
         <dependency>
             <groupId>com.zj</groupId>
             <artifactId>common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
         <!-- springcloud alibaba nacos config -->
@@ -45,13 +51,6 @@
             <artifactId>spring-cloud-starter-loadbalancer</artifactId>
         </dependency>
 
-        <!-- hystrix -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-            <version>2.2.10.RELEASE</version>
-        </dependency>
-
         <!-- bootstrap启动器, springboot2.4之后需要 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -64,16 +63,9 @@
             <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
         </dependency>
 
-        <!-- 用默认的lettuce客户端 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-            <version>${springboot.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-mail</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
             <version>${springboot.version}</version>
         </dependency>
 
@@ -89,12 +81,6 @@
             <version>1.2.3</version>
         </dependency>
 
-        <!-- 多数据源 -->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
-            <version>3.4.0</version>
-        </dependency>
 
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>

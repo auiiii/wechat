@@ -1,4 +1,4 @@
-package com.zj.wechat.entity;
+package com.zj.common.entity;
 
 import java.io.Serializable;
 
