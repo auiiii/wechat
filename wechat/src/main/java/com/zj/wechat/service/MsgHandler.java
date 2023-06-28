@@ -143,7 +143,7 @@ public class MsgHandler {
         }
         if(null != content && (content.contains("网页")))
         {
-            return buildTextMessage(entity,"http://159.138.46.191:88/#/");
+            return buildTextMessage(entity,"http://117.50.175.161:88/#/");
         }
         if(null != content && content.contains("电影"))
         {
