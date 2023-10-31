@@ -4,9 +4,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.zj.common.entity.R;
 import com.zj.wechat.service.WeChatService;
 import com.zj.wechat.util.SignatureUtil;
-import org.apache.poi.xwpf.usermodel.XWPFDocument;
-import org.apache.poi.xwpf.usermodel.XWPFParagraph;
-import org.apache.poi.xwpf.usermodel.XWPFRun;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
@@ -18,10 +15,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.*;
-import java.net.URLEncoder;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -94,7 +87,7 @@ public class WeChatController {
 
     /**
      * 回复微信服务器
-     * @param body
+     * @param request
      * @return
      */
     @PostMapping("wx")
@@ -121,113 +114,6 @@ public class WeChatController {
         {
             logger.error("", ex);
             return "error";
-        }
-    }
-
-    /**
-     *  调用chatGpr生成一篇doc
-     * @param request
-     * @return
-     */
-    @PostMapping("chatGpr")
-    public R<?> handler(@RequestBody Map<String,Object> map)
-    {
-        logger.info("[IN-req]/wechat/chatGpr,reqBody is {}", JSONObject.toJSONString(map));
-        try
-        {
-            Map<String,Object> result = service.createDoc(map);
-            logger.info("[IN-rsp]/wechat/chatGpr");
-            return R.ok(result);
-        }
-        catch (Exception ex)
-        {
-            logger.error("", ex);
-            return R.fail();
-        }
-    }
-
-    /**
-     *  调用chatGpr生成一篇doc
-     * @param request
-     * @return
-     */
-    @PostMapping("downloadDoc")
-    public void downloadDoc(@RequestBody Map<String,Object>reqBody, HttpServletResponse response) throws IOException {
-        logger.info("[IN-req]/wechat/downloadDoc");
-        BufferedReader reader = null;
-        OutputStream os = null;
-        try
-        {
-            os = response.getOutputStream();
-            String path = (String) reqBody.get("path");
-            String name = (String) reqBody.get("name");
-            String fileContent = "";
-            reader = new BufferedReader(new InputStreamReader(new FileInputStream(path),"UTF-8"));
-            String line;
-            while ((line = reader.readLine()) != null)
-            {
-                fileContent += line;
-            }
-            XWPFDocument document= new XWPFDocument();
-            //分页
-            XWPFParagraph firstParagraph = document.createParagraph();
-            //格式化段落
-            firstParagraph.getStyleID();
-            XWPFRun run = firstParagraph.createRun();
-            run.setText(fileContent);
-            document.createTOC();
-
-            response.setContentType("application/octet-stream;charset=utf-8");
-            response.setHeader("Content-Disposition", "attachment;filename="+ URLEncoder.encode(name,"utf-8"));
-            //遵守缓存规定
-            response.addHeader("Pargam", "no-cache");
-            response.addHeader("Cache-Control", "no-cache");
-            //输出流
-            document.write(os);
-            os.flush();
-            os.close();
-            logger.info("[IN-rsp]/wechat/downloadDoc");
-        }
-        catch (Exception ex)
-        {
-            logger.error("", ex);
-        }
-        finally {
-            if(null != reader)
-            {
-                reader.close();
-            }
-            if(null != os)
-            {
-                os.close();
-            }
-        }
-    }
-
-    /**
-     * zip压缩包示意
-     * @param response
-     * @param params
-     */
-    @PostMapping("downloadZip")
-    public void downloadFile(HttpServletResponse response, @RequestBody Map<String, Object> params)
-    {
-        logger.info("[IN-req]/wechat/downloadZip,req-body is:{}", JSONObject.toJSONString(params));
-        try
-        {
-            List<String> nameList = new ArrayList<>();
-            List<String> urls = (List<String>) params.get("urls");
-            for (String url:urls) {
-                String[] fileName = url.split("/");
-                nameList.add(fileName[fileName.length-1]);
-            }
-            //List<byte[]> list = service.getFileByteList(params);
-            //ZipOutUtils.toZip(response,list,nameList);
-            logger.info("[IN-rsp]/wechat/downloadZip done");
-        }
-        catch(Exception ex)
-        {
-            logger.error("",ex);
         }
     }
 
