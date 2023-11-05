@@ -12,7 +12,7 @@
     <groupId>com.zj</groupId>
     <artifactId>wechat</artifactId>
     <name>wechat</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Demo project for Spring Boot & weChat-Server</description>
 
     <dependencies>
 
