@@ -13,7 +13,7 @@
     <artifactId>outservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>out-service</name>
-    <description>out service for wechat-demo</description>
+    <description>该微服务后续提供第三方能力接口-模拟分布式事务使用</description>
 
     <dependencies>
 
@@ -21,11 +21,6 @@
             <groupId>com.zj</groupId>
             <artifactId>common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
         <!-- springcloud alibaba nacos config -->
@@ -67,19 +62,6 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.47</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.2.3</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.2.0</version>
         </dependency>
 
     </dependencies>

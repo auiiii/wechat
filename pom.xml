@@ -19,6 +19,7 @@
         <module>wechat</module>
         <module>out-service</module>
         <module>api</module>
+        <module>demo</module>
     </modules>
 
     <properties>

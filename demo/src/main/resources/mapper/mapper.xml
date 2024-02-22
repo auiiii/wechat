@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cbiot.entity.XgDao">
+
+    <resultMap id="xgMap" type="com.cbiot.entity.XgEntity">
+        <result property="msisdn"    column="SJ"    />
+        <result property="ryzt"    column="RYZT"    />
+        <result property="sjjg"    column="SJJG"    />
+        <result property="ejjg"    column="EJJG"    />
+        <result property="yjjg"    column="YJJG"    />
+        <result property="jtrylb"    column="JTRYLB"    />
+        <result property="rylb"    column="RYLB"    />
+        <result property="xm"    column="XM"    />
+        <result property="xgh"    column="XGH"    />
+    </resultMap>
+    
+    <select id="selectByXgh" resultMap="xgMap">
+        select * FROM VIEW_RYJBXX
+                 where SJ = #{msisdn} and XGH = #{xgh} AND rownum &lt;= 1
+    </select>
+
+    <select id="selectAll" resultMap="xgMap">
+        select * FROM VIEW_RYJBXX
+    </select>
+
+    <select id="selectOne" resultMap="xgMap">
+        select * FROM VIEW_RYJBXX where rownum &lt;= 1
+    </select>
+</mapper>

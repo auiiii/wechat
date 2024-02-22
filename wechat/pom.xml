@@ -12,7 +12,7 @@
     <groupId>com.zj</groupId>
     <artifactId>wechat</artifactId>
     <name>wechat</name>
-    <description>Demo project for Spring Boot & weChat-Server</description>
+    <description>对接微信公众号服务端-认证及媒体交互-对接前端</description>
 
     <dependencies>
 
@@ -70,23 +70,11 @@
             <version>5.1.47</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.2.3</version>
-        </dependency>
-
         <!-- 多数据源 -->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
             <version>3.4.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.2.0</version>
         </dependency>
 
         <dependency>

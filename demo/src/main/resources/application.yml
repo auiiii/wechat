@@ -1,0 +1,18 @@
+logging:
+    config: classpath:logback-cicd.xml
+test:
+    name: hello
+server:
+    port: 8080
+spring:
+    datasource:
+        url: jdbc:oracle:thin:@10.12.6.50:1521:helowin
+        username: cbiot
+        password: cbiot123
+        driver-class-name: oracle.jdbc.OracleDriver
+        type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+    mapper-locations: classpath:mapper/*.xml
+    type-aliases-package: com.cbiot.entity
+    configuration:
+        map-underscore-to-camel-case: true
