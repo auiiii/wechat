@@ -7,12 +7,14 @@ import com.cbiot.entity.XgEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
 
 @RestController
+@RefreshScope
 @Slf4j
 @RequestMapping("/shz-npn/dd/")
 public class Controller {

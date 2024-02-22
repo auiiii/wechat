@@ -1,0 +1,32 @@
+# Spring
+spring:
+  application:
+    # 应用名称
+    name: demo
+  profiles:
+    # 环境配置
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        namespace: 843c4a7b-0139-4a37-befe-f6f3f8ca8926
+        group: demo-dev
+        username: nacos
+        password: nacos
+        # 服务注册地址
+        server-addr: 117.50.175.161:8848
+      config:
+        namespace: 843c4a7b-0139-4a37-befe-f6f3f8ca8926
+        group: demo-dev
+        username: nacos
+        password: nacos
+        # 配置中心地址
+        server-addr: 117.50.175.161:8848
+        # 配置文件格式
+        file-extension: yml
+        # 共享配置
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+        # extension-configs[0]:
+        #   group: DEV
+        #   data-id:
