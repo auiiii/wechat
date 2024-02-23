@@ -1,4 +1,4 @@
-package com.cbiot.entity;
+package com.zj.entity;
 
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;

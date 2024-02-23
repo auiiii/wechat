@@ -1,4 +1,4 @@
-package com.cbiot.entity;
+package com.zj.entity;
 
 import lombok.Data;
 

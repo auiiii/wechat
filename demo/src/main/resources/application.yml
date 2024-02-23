@@ -1,9 +1,18 @@
 server:
-    port: 8080
+  port: 8080
 logging:
-    config: classpath:logback-cicd.xml
+  config: classpath:logback-cicd.xml
 mybatis:
-    mapper-locations: classpath:mapper/*.xml
-    type-aliases-package: com.cbiot.entity
-    configuration:
-        map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.cbiot.entity
+  configuration:
+    map-underscore-to-camel-case: true
+feign:
+  circuitbreaker:
+    enabled: true
+    client:
+      config:
+        default:
+          connectTimeout: 5000
+          readTimeout: 5000
+          loggerLevel: FULL

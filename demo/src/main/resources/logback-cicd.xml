@@ -44,7 +44,7 @@
 		<appender-ref ref="FILE" />
 	</logger>
 
-	<logger name="com.cbiot" level="DEBUG">
+	<logger name="com.zj" level="DEBUG">
 		<appender-ref ref="FILE" />
 	</logger>
 

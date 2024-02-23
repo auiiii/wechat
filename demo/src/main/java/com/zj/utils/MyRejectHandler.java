@@ -1,4 +1,4 @@
-package com.cbiot.utils;
+package com.zj.utils;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.RejectedExecutionHandler;

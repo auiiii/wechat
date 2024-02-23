@@ -1,4 +1,4 @@
-package com.cbiot.config;
+package com.zj.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

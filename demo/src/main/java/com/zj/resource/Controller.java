@@ -1,9 +1,9 @@
-package com.cbiot.resource;
+package com.zj.resource;
 
 import com.alibaba.fastjson.JSONObject;
-import com.cbiot.entity.ResponseVO;
-import com.cbiot.entity.XgDao;
-import com.cbiot.entity.XgEntity;
+import com.zj.entity.ResponseVO;
+import com.zj.entity.XgDao;
+import com.zj.entity.XgEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;

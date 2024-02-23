@@ -24,6 +24,7 @@ public class OutSevController {
     @GetMapping("hello")
     public String hello()
     {
+        logger.info("[IN-req]/out/hello");
         return "hello-out";
     }
 

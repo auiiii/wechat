@@ -1,4 +1,4 @@
-package com.cbiot.utils;
+package com.zj.utils;
 
 import com.google.common.hash.BloomFilter;
 import com.google.common.hash.Funnels;
