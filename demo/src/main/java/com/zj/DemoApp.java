@@ -6,12 +6,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @MapperScan(basePackages = "com.zj.entity")
 @EnableDiscoveryClient
 @EnableFeignClients(basePackages = {"com.zj"})
 @EnableHystrix
+@EnableScheduling
 public class DemoApp
 {
     public static void main( String[] args )

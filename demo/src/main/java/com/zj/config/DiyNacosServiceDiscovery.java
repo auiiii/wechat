@@ -10,17 +10,11 @@ import com.alibaba.nacos.api.NacosFactory;
 import com.alibaba.nacos.api.exception.NacosException;
 import com.alibaba.nacos.api.naming.NamingService;
 import com.alibaba.nacos.api.naming.pojo.Instance;
-import com.alibaba.nacos.api.naming.pojo.ListView;
-import com.alibaba.nacos.client.naming.NacosNamingService;
-import com.zj.entity.NacosNameSpace;
-import com.zj.entity.NacosNameSpaceRsp;
+import com.zj.utils.RedisUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
-import javax.xml.stream.events.Namespace;
 import java.util.*;
 
 /**
@@ -31,13 +25,14 @@ import java.util.*;
 public class DiyNacosServiceDiscovery extends NacosServiceDiscovery {
 
     @Resource
-    private RestTemplate restTemplate;
+    private RedisUtils redisUtils;
 
     public DiyNacosServiceDiscovery(NacosDiscoveryProperties discoveryProperties, NacosServiceManager nacosServiceManager) {
         super(discoveryProperties, nacosServiceManager);
         this.discoveryProperties = discoveryProperties;
         this.nacosServiceManager = nacosServiceManager;
     }
+
     private NacosDiscoveryProperties discoveryProperties;
     private NacosServiceManager nacosServiceManager;
 
@@ -45,34 +40,29 @@ public class DiyNacosServiceDiscovery extends NacosServiceDiscovery {
     public List<ServiceInstance> getInstances(String serviceId) throws NacosException {
         String group = this.discoveryProperties.getGroup();
         // 优先保证同分组下的服务调用
-        String address = "http://" + this.discoveryProperties.getServerAddr() + "/nacos/v1/console/namespaces";
         List<Instance> instances = this.namingService().selectInstances(serviceId, group, true);
         if (CollectionUtil.isEmpty(instances)) {
-            // 如果同分组下找不到服务,遍历所有集群
-            ResponseEntity<NacosNameSpaceRsp> rsp = restTemplate.getForEntity(address, NacosNameSpaceRsp.class);
-            log.info("获取全部命名空间信息:{}", JSONObject.toJSONString(rsp.getBody()));
-            List<NacosNameSpace> allNameSpaces = rsp.getBody().getData();
-            for (NacosNameSpace nameSpace: allNameSpaces)
+            // 如果同分组下找不到服务,通过定时缓存的集群信息匹配
+            String nameSpaceInfo = (String) redisUtils.getRedisHash("nacos.namespace.info", serviceId);
+            log.info("通过hash匹配:{}", nameSpaceInfo);
+            String nameSpace = nameSpaceInfo.split("&")[0];
+            String nameSpaceShowName = nameSpaceInfo.split("&")[1];
+            Properties properties = new Properties();
+            properties.put("serverAddr", this.discoveryProperties.getServerAddr());
+            properties.put("username", Objects.toString(this.discoveryProperties.getUsername(), ""));
+            properties.put("password", Objects.toString(this.discoveryProperties.getPassword(), ""));
+            properties.put("namespace", nameSpace);
+            properties.put("com.alibaba.nacos.naming.log.filename", this.discoveryProperties.getLogName());
+            properties.put("endpoint", this.discoveryProperties.getEndpoint());
+            properties.put("accessKey", this.discoveryProperties.getAccessKey());
+            properties.put("secretKey", this.discoveryProperties.getSecretKey());
+            properties.put("clusterName", this.discoveryProperties.getClusterName());
+            properties.put("namingLoadCacheAtStart", this.discoveryProperties.getNamingLoadCacheAtStart());
+            NamingService nameService = NacosFactory.createNamingService(properties);
+            instances = nameService.selectInstances(serviceId, nameSpaceShowName, true);
+            if(CollectionUtil.isNotEmpty(instances))
             {
-                log.info("遍历命名空间:{}", nameSpace);
-                Properties properties = new Properties();
-                properties.put("serverAddr", this.discoveryProperties.getServerAddr());
-                properties.put("username", Objects.toString(this.discoveryProperties.getUsername(), ""));
-                properties.put("password", Objects.toString(this.discoveryProperties.getPassword(), ""));
-                properties.put("namespace", nameSpace.getNamespace());
-                properties.put("com.alibaba.nacos.naming.log.filename", this.discoveryProperties.getLogName());
-                properties.put("endpoint", this.discoveryProperties.getEndpoint());
-                properties.put("accessKey", this.discoveryProperties.getAccessKey());
-                properties.put("secretKey", this.discoveryProperties.getSecretKey());
-                properties.put("clusterName", this.discoveryProperties.getClusterName());
-                properties.put("namingLoadCacheAtStart", this.discoveryProperties.getNamingLoadCacheAtStart());
-                NamingService nameService = NacosFactory.createNamingService(properties);
-                instances = nameService.selectInstances(serviceId, nameSpace.getNamespaceShowName(), true);
-                if(CollectionUtil.isNotEmpty(instances))
-                {
-                    log.info("通过遍历命名空间:" + nameSpace + "获得实例:{} ", JSONObject.toJSONString(instances));
-                    break;
-                }
+                log.info("通过缓存hash匹配:" + nameSpace + "获得实例:{} ", JSONObject.toJSONString(instances));
             }
         }
         return hostToServiceInstanceList(instances, serviceId);
@@ -83,7 +73,6 @@ public class DiyNacosServiceDiscovery extends NacosServiceDiscovery {
     }
 
     public static List<ServiceInstance> hostToServiceInstanceList(List<Instance> instances, String serviceId) {
-        log.info("in");
         List<ServiceInstance> result = new ArrayList(instances.size());
         Iterator var3 = instances.iterator();
 

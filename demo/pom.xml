@@ -86,6 +86,13 @@
       <version>20.0</version>
     </dependency>
 
+    <!-- 用默认的lettuce客户端 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-redis</artifactId>
+      <version>${springboot.version}</version>
+    </dependency>
+
   </dependencies>
 
   <build>
