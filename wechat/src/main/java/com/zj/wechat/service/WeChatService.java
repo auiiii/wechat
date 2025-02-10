@@ -1,12 +1,10 @@
 package com.zj.wechat.service;
 
 import com.alibaba.fastjson.JSONObject;
-import com.zj.api.feign.OutServiceFeign;
 import com.zj.common.utils.ImageUtil;
 import com.zj.wechat.entity.*;
 import com.zj.wechat.pojo.Constants;
 import com.zj.wechat.pojo.MsgEntity;
-import io.seata.spring.annotation.GlobalTransactional;
 import net.jodah.expiringmap.ExpirationPolicy;
 import net.jodah.expiringmap.ExpiringMap;
 import org.slf4j.Logger;
@@ -27,9 +25,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.annotation.Resource;
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletResponse;
-import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -45,9 +41,6 @@ public class WeChatService {
 
     @Resource
     WeChatMediaInfoDao mediaInfoDao;
-
-    @Resource
-    private OutServiceFeign outServiceFeign;
 
     private final ExpiringMap<String, String> map = ExpiringMap.builder()
             .maxSize(1)
@@ -225,7 +218,7 @@ public class WeChatService {
      * @param operation
      * @param operator
      */
-    @GlobalTransactional
+    //@GlobalTransactional
     public void process(String operation, String operator) {
         WeChatMediaInfo test = new WeChatMediaInfo();
         test.setMediaId("123");
@@ -233,8 +226,6 @@ public class WeChatService {
         test.setName("at-test");
         test.setUrl("123");
         mediaInfoDao.insert(test);
-        Map<String, Object> process = outServiceFeign.process(operation, operator);
-        logger.info(JSONObject.toJSONString(process));
     }
 
     /**

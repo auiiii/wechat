@@ -38,7 +38,7 @@ public class FunctionController {
     @Resource
     FuncService funcService;
 
-    @Value("${cfg.gprToken}")
+    @Value("${cfg.gprTokenL:123}")
     private String gprToken;
 
     /**

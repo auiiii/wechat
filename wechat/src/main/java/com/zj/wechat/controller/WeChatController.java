@@ -52,13 +52,6 @@ public class WeChatController {
     }
 
 
-    @GetMapping("process")
-    public R<?> process(@RequestParam("operation")String operation, @RequestParam("operator")String operator)
-    {
-        service.process(operation,operator);
-        return R.ok();
-    }
-
     /**
      * 获取token能力接口
      * @return
