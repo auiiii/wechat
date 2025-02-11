@@ -77,7 +77,7 @@ public class WeChatMusicController {
         LOGGER.info("[IN-req]/music/list,req-keyWord is:{}", keyWord);
         try {
             List<WeChatMusic> list = service.queryMusicList(limit, keyWord);
-            LOGGER.info("[IN-rsp]musics/list,rsp is {}", JSONObject.toJSONString(list));
+            LOGGER.info("[IN-rsp]music/list,rsp is {}", JSONObject.toJSONString(list));
             return R.ok(list);
         } catch (Exception e) {
             LOGGER.error("", e);

@@ -2,18 +2,27 @@ server:
   port: 8185
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    type: com.alibaba.druid.pool.DruidDataSource
-    username: wechat
-    password: fk6258077
-    url: jdbc:mysql://1.95.44.208:3306/wechat?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=10&allowMultiQueries=true
     dynamic:
+      p6spy: false
+      lazy: true
       druid:
         initial-size: 5
-        min-idle: 1
-        max-active: 10
-        max-wait: 6000
-        filters: stat,slf4j
+        max-active: 8
+        min-idle: 3
+        max-wait: 1000
+        validation-query: 'select 1 from dual'
+      #primary默认读取master命名的,只要不乱取名即可
+      datasource:
+        master:
+          driver-class-name: com.mysql.jdbc.Driver
+          username: wechat
+          password: fk6258077
+          url: jdbc:mysql://1.95.44.208:3306/wechat?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=10&allowMultiQueries=true
+        slave:
+          driver-class-name: com.mysql.jdbc.Driver
+          username: wechat
+          password: fk6258077
+          url: jdbc:mysql://1.95.44.208:3306/wechat?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=10&allowMultiQueries=true
   jersey:
     application-path: zj
   mail:
