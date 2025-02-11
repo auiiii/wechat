@@ -14,8 +14,8 @@ import java.util.concurrent.TimeUnit;
 @Configuration
 public class ThreadFactory {
 
-    private final int corePoolSize = 10;
-    private final int maximumPoolSize = 20;
+    private final int corePoolSize = 5;
+    private final int maximumPoolSize = 10;
     private final long keepAliveTime = 5;
     private ThreadPoolExecutor excutor = null;
 
@@ -23,7 +23,7 @@ public class ThreadFactory {
     @Bean(name ="MyThreadPoolExecutor")
     public ThreadPoolExecutor getThreadPool()
     {
-        BlockingQueue queue = new LinkedBlockingQueue(100);
+        BlockingQueue queue = new LinkedBlockingQueue(20);
         if(null == excutor)
         {
             excutor = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, keepAliveTime,TimeUnit.SECONDS,queue, new MyRejectHandler(queue));

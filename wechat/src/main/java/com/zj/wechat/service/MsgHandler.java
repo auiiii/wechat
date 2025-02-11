@@ -6,6 +6,7 @@ import com.zj.wechat.pojo.Constants;
 import com.zj.wechat.pojo.MsgEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
@@ -42,6 +43,9 @@ public class MsgHandler {
 
     @Resource
     private ResourceService service;
+
+    @Value("${cfg.portal.url:http://1.95.44.208:8080}")
+    private String portalUrl;
 
     /**
      * 入口逻辑
@@ -143,7 +147,7 @@ public class MsgHandler {
         }
         if(null != content && (content.contains("网页")))
         {
-            return buildTextMessage(entity,"http://117.50.175.161:88/#/");
+            return buildTextMessage(entity,portalUrl);
         }
         if(null != content && content.contains("电影"))
         {
