@@ -7,6 +7,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+/**
+ * 该工程测试RPC、分布式事务调用
+ */
 @SpringBootApplication
 @EnableTransactionManagement
 @MapperScan(basePackages = "com.zj.out.entity")

@@ -1,14 +1,20 @@
 package com.zj.wechat.controller;
 
+import com.alibaba.excel.EasyExcel;
 import com.alibaba.fastjson.JSONObject;
 import com.zj.common.entity.R;
+import com.zj.wechat.config.ColumnWidthHandler;
 import com.zj.wechat.entity.WeChatMovie;
+import com.zj.wechat.pojo.MovieExportDTO;
 import com.zj.wechat.service.ResourceService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
+import java.net.URLEncoder;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -82,5 +88,38 @@ public class WeChatMovieController {
             LOGGER.error("", e);
             return R.fail(500, "internal server error");
         }
+    }
+
+
+    @GetMapping("export")
+    public void exportExcel(@RequestParam("limit")Long limit, @RequestParam(value = "keyWord", required = false)String keyWord, HttpServletResponse response) {
+        LOGGER.info("[IN-req]/movie/export,req-keyWord is:{}", keyWord);
+        try {
+            List<WeChatMovie> list = service.queryMovieList(limit, keyWord);
+            // 1. 设置响应类型为 Excel（.xlsx）
+            response.setContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+            response.setCharacterEncoding("utf-8");
+            // 2. 设置文件名（关键步骤）
+            String fileName = "存档电影表"; // 中文文件名
+            String encodedFileName = URLEncoder.encode(fileName, "UTF-8")
+                    .replaceAll("\\+", "%20"); // 防止空格变加号（某些浏览器）
+            // 3. 设置 Content-Disposition 响应头
+            response.setHeader("Content-disposition",
+                    "attachment; filename=" + encodedFileName + ".xlsx");
+
+            // 定义列宽（单位：1/256 字符宽度）
+            // 定义每列宽度（按 DTO 字段顺序）
+            List<Integer> columnWidths = Arrays.asList(8, 25, 15, 40, 30, 15, 30);
+
+            EasyExcel.write(response.getOutputStream(), MovieExportDTO.class)
+                    .sheet("Sheet1")
+                    .registerWriteHandler(new ColumnWidthHandler(columnWidths))
+                    .doWrite(list);
+            }
+            catch (Exception e)
+            {
+                LOGGER.warn("", e);
+            }
+            LOGGER.info("[IN-rsp]movie/export,done");
     }
 }

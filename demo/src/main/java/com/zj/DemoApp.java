@@ -8,6 +8,9 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
+/**
+ * 该工程用来实现nacos打破分组RPC调用
+ */
 @SpringBootApplication
 @MapperScan(basePackages = "com.zj.entity")
 @EnableDiscoveryClient

@@ -71,6 +71,25 @@
             <version>8.0.32</version>
         </dependency>
 
+        <!-- easyExcel不支持xls导出了,需要的话用下方的poi -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>3.3.4</version>
+        </dependency>
+
+
+        <!--dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.3</version>
+        </dependency-->
+
         <!-- 多数据源 -->
         <dependency>
             <groupId>com.baomidou</groupId>
