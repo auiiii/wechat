@@ -9,6 +9,11 @@ import org.apache.poi.ss.usermodel.*;
 
 import java.util.List;
 
+/**
+ * 支持easyExcel导出时设置列宽、列高、表头字体大小、填充色
+ * 限制是基于cell回写，最后一列无法覆盖格式，处理方式在列最后加一列空列并隐藏
+ * 待优化点，添加传入对columnWidths的校验
+ */
 public class CustomSheetWriteHandler implements CellWriteHandler {
 
     //外围调用时传入各列的列宽
