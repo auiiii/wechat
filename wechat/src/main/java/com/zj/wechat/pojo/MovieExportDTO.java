@@ -27,4 +27,11 @@ public class MovieExportDTO {
     @ExcelProperty("海报链接")
     private String picUrl;
 
+    @ExcelProperty(" ")
+    private String lastRow;//easyExcel流式写入-特殊处理-最后一列补空
+
+    public String getLastRow() {
+        return "";
+    }
+
 }

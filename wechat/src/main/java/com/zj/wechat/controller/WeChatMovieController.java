@@ -3,7 +3,7 @@ package com.zj.wechat.controller;
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.fastjson.JSONObject;
 import com.zj.common.entity.R;
-import com.zj.wechat.config.ColumnWidthHandler;
+import com.zj.wechat.config.CustomSheetWriteHandler;
 import com.zj.wechat.entity.WeChatMovie;
 import com.zj.wechat.pojo.MovieExportDTO;
 import com.zj.wechat.service.ResourceService;
@@ -107,13 +107,10 @@ public class WeChatMovieController {
             response.setHeader("Content-disposition",
                     "attachment; filename=" + encodedFileName + ".xlsx");
 
-            // 定义列宽（单位：1/256 字符宽度）
-            // 定义每列宽度（按 DTO 字段顺序）
-            List<Integer> columnWidths = Arrays.asList(8, 25, 15, 40, 30, 15, 30);
-
+            List<Integer> columnWidths = Arrays.asList(10, 10, 10, 20, 20, 40, 30, 1);
             EasyExcel.write(response.getOutputStream(), MovieExportDTO.class)
                     .sheet("Sheet1")
-                    .registerWriteHandler(new ColumnWidthHandler(columnWidths))
+                    .registerWriteHandler(new CustomSheetWriteHandler(columnWidths))
                     .doWrite(list);
             }
             catch (Exception e)
