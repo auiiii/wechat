@@ -5,8 +5,6 @@ import com.zj.common.utils.ImageUtil;
 import com.zj.wechat.entity.*;
 import com.zj.wechat.pojo.Constants;
 import com.zj.wechat.pojo.MsgEntity;
-import net.jodah.expiringmap.ExpirationPolicy;
-import net.jodah.expiringmap.ExpiringMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -32,7 +30,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 @Service
 public class WeChatService {
@@ -42,23 +39,14 @@ public class WeChatService {
     @Resource
     WeChatMediaInfoDao mediaInfoDao;
 
-    private final ExpiringMap<String, String> map = ExpiringMap.builder()
-            .maxSize(1)
-            .expirationPolicy(ExpirationPolicy.ACCESSED)
-            .variableExpiration()
-            .build();
-
-    @Value("${cfg.appId}")
-    private String appId;
-
-    @Value("${cfg.appSecret}")
-    private String appSecret;
-
     @Resource(name = "restTemplate")
     private RestTemplate restTemplate;
 
     @Resource
     private MsgHandler handler;
+
+    @Resource
+    private WeChatTokenService tokenService;
 
     /**
      * 处理消息
@@ -72,24 +60,9 @@ public class WeChatService {
 
     /**
      * 获取token,有时效
-     *
-     * @return
      */
     public String getAccessToken() {
-        String accessToken = map.get("token");
-        if (null != accessToken) {
-            return accessToken;
-        }
-        String url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" + appId + "&secret=" + appSecret;
-        logger.info("getAccessToken:{}", url);
-        ResponseEntity<String> responseEntity = restTemplate.getForEntity(url, String.class);
-        String body = responseEntity.getBody();
-        logger.info(JSONObject.toJSONString(responseEntity));
-        JSONObject obj = JSONObject.parseObject(body);
-        String token = obj.getString("access_token");
-        //存入内存中，获取token每日限制次数的
-        map.put("token", token, ExpirationPolicy.ACCESSED, obj.getLong("expires_in"), TimeUnit.MILLISECONDS);
-        return token;
+        return tokenService.getAccessToken();
     }
 
     /**
@@ -101,10 +74,7 @@ public class WeChatService {
      * @throws IOException
      */
     public String uploadFile(MultipartFile file, String name) throws IOException {
-        String token = map.get("token");
-        if ("".equals(token) || null == token) {
-            token = getAccessToken();
-        }
+        String token = tokenService.getAccessToken();
         String url = "https://api.weixin.qq.com/cgi-bin/material/add_material?access_token=" + token + "&type=image";
         logger.info("upload:{}", url);
 

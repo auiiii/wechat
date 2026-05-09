@@ -103,6 +103,13 @@
             <version>5.1.2</version>
         </dependency>
 
+        <!-- 智谱AI SDK -->
+        <dependency>
+            <groupId>ai.z.openapi</groupId>
+            <artifactId>zai-sdk</artifactId>
+            <version>0.3.3</version>
+        </dependency>
+
     </dependencies>
 
     <build>

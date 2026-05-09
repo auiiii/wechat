@@ -7,9 +7,12 @@ import com.zj.wechat.pojo.MsgEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.ResponseEntity;
+import org.springframework.core.io.ByteArrayResource;
+import org.springframework.http.*;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
@@ -37,6 +40,15 @@ public class MsgHandler {
 
     @Resource
     WeChatUserInfoDao userInfoDao;
+
+    @Resource
+    private ContentGenerateService contentGenerateService;
+
+    @Resource
+    private PostTaskService postTaskService;
+
+    @Resource
+    private WeChatTokenService tokenService;
 
     @Resource
     private RestTemplate restTemplate;
@@ -166,6 +178,18 @@ public class MsgHandler {
         {
             return buildTextMessage(entity,"微信平台识别为不支持的消息类型");
         }
+        // 推文生成分支：以"推文"关键词触发
+        if(null != content && content.startsWith("推文"))
+        {
+            String textTheme = content.split("&")[0];
+            String imageDesc  = content.split("&")[1];
+            String theme = textTheme.substring(2).trim();
+            if(theme.isEmpty())
+            {
+                return buildTextMessage(entity,"请输入推文主题，例如：推文 美食探店");
+            }
+            return handlePostGeneration(entity, theme, imageDesc);
+        }
         else {
             try{
                 //调用青云等免费AI
@@ -210,6 +234,10 @@ public class MsgHandler {
      */
     private String buildImageMessage(MsgEntity entity,String name) {
         String mediaId = mediaInfoDao.queryByName(name).getMediaId();
+        return buildImageMessageByMediaId(entity, mediaId);
+    }
+
+    private String buildImageMessageByMediaId(MsgEntity entity, String mediaId) {
         return String.format(
                 "<xml>" +
                         "<ToUserName><![CDATA[%s]]></ToUserName>" +
@@ -270,6 +298,88 @@ public class MsgHandler {
                         "</xml>",
                 entity.getFromUserName(), entity.getToUserName(), getUtcTime(), title, description, hqMusicUrl, hqMusicUrl
         );
+    }
+
+    /**
+     * 推文生成入口
+     * 1. 调用AI服务生成推文文本
+     * 2. 调用AI服务生成配图
+     * 3. 将推文内容入库
+     * 4. 上传图片到微信素材库获取media_id
+     * 5. 通过图片+文本消息回复给用户
+     */
+    public String handlePostGeneration(MsgEntity entity, String theme, String imageDesc) {
+        try {
+            // 1. 生成推文文本，格式：标题\n正文\n标签
+            String textResult = contentGenerateService.generateText(theme);
+            String[] parts = textResult.split("\n");
+            String title = "推文";
+            String tags = parts[parts.length-1];
+
+            // 2. 生成配图
+            byte[] imageBytes = contentGenerateService.generateImage(imageDesc);
+
+            // 3. 入库
+            PostTask task = new PostTask();
+            task.setTitle(title);
+            task.setContent(textResult);
+            task.setTags(tags);
+            task.setTheme(theme);
+            postTaskService.createTask(task);
+
+            // 4. 上传图片到微信素材库（有图片时）
+            String mediaId = null;
+            if(imageBytes != null && imageBytes.length > 0) {
+                mediaId = uploadImageBytes(imageBytes, title);
+            }
+
+            // 5. 回复用户：先发图片再发文本
+            StringBuilder reply = new StringBuilder();
+            reply.append("推文已生成并保存：\n");
+            reply.append("标题：").append(title).append("\n");
+            reply.append("正文：").append(textResult).append("\n");
+            reply.append("标签：").append(tags).append("\n\n");
+            reply.append("长按保存图片后可直接发布到小红书哦~");
+
+            // 有图片时返回图片消息（微信被动回复只能返回一条消息）
+            if(mediaId != null) {
+                return buildImageMessageByMediaId(entity, mediaId);
+            }
+            return buildTextMessage(entity, reply.toString());
+        } catch (Exception e) {
+            logger.error("推文生成失败, theme={}", theme, e);
+            return buildTextMessage(entity, "推文生成失败，请稍后再试");
+        }
+    }
+
+    /**
+     * 上传图片字节数组到微信素材库
+     */
+    private String uploadImageBytes(byte[] imageBytes, String name) {
+        try {
+            String token = tokenService.getAccessToken();
+            String url = "https://api.weixin.qq.com/cgi-bin/material/add_material?access_token=" + token + "&type=image";
+
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.MULTIPART_FORM_DATA);
+            MultiValueMap<String, Object> params = new LinkedMultiValueMap<>();
+            ByteArrayResource byteArrayResource = new ByteArrayResource(imageBytes) {
+                @Override
+                public String getFilename() {
+                    return name + ".png";
+                }
+            };
+            params.add("media", byteArrayResource);
+            HttpEntity<MultiValueMap<String, Object>> request = new HttpEntity<>(params, headers);
+            ResponseEntity<String> responseEntity = restTemplate.postForEntity(url, request, String.class);
+            String body = responseEntity.getBody();
+            logger.info("上传图片到微信素材库: {}", body);
+            JSONObject obj = JSONObject.parseObject(body);
+            return obj.getString("media_id");
+        } catch (Exception e) {
+            logger.error("上传图片到微信素材库失败", e);
+            return null;
+        }
     }
 
     /**

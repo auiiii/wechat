@@ -4,10 +4,13 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
+import org.springframework.http.converter.ByteArrayHttpMessageConverter;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
+import java.util.Arrays;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
+import org.springframework.http.converter.support.AllEncompassingFormHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
@@ -51,6 +54,12 @@ public class RestTemplateConfig {
 
     private List<HttpMessageConverter<?>> getConverts() {
         List<HttpMessageConverter<?>> messageConverters = new ArrayList<>();
+
+        // ByteArray转换器，支持所有MediaType（用于下载图片等二进制内容）
+        ByteArrayHttpMessageConverter byteArrayConvert = new ByteArrayHttpMessageConverter();
+        byteArrayConvert.setSupportedMediaTypes(Arrays.asList(MediaType.APPLICATION_OCTET_STREAM, MediaType.IMAGE_PNG, MediaType.IMAGE_JPEG));
+        messageConverters.add(byteArrayConvert);
+
         // String转换器
         StringHttpMessageConverter stringConvert = new StringHttpMessageConverter();
         List<MediaType> stringMediaTypes = new ArrayList<MediaType>() {{
@@ -62,6 +71,9 @@ public class RestTemplateConfig {
         }};
         stringConvert.setSupportedMediaTypes(stringMediaTypes);
         messageConverters.add(stringConvert);
+
+        // 表单转换器，支持multipart/form-data（用于上传文件等场景）
+        messageConverters.add(new AllEncompassingFormHttpMessageConverter());
         return messageConverters;
     }
 
