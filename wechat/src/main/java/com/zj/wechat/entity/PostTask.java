@@ -7,11 +7,19 @@ import java.util.Date;
  */
 public class PostTask {
 
+    /** 任务状态: 0-生成中 1-已完成 2-失败 */
+    public static final int STATUS_GENERATING = 0;
+    public static final int STATUS_COMPLETED = 1;
+    public static final int STATUS_FAILED = 2;
+
     private Long id;
+    private String msgId;
     private String title;
     private String content;
     private String tags;
     private String theme;
+    private String imageUrl;
+    private Integer status;
     private Date createTime;
     private Date updateTime;
 
@@ -21,6 +29,14 @@ public class PostTask {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getMsgId() {
+        return msgId;
+    }
+
+    public void setMsgId(String msgId) {
+        this.msgId = msgId;
     }
 
     public String getTitle() {
@@ -53,6 +69,22 @@ public class PostTask {
 
     public void setTheme(String theme) {
         this.theme = theme;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
     public Date getCreateTime() {

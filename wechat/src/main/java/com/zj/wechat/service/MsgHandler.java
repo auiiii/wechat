@@ -7,12 +7,9 @@ import com.zj.wechat.pojo.MsgEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.*;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
@@ -58,6 +55,9 @@ public class MsgHandler {
 
     @Value("${cfg.portal.url:http://1.95.44.208:8080}")
     private String portalUrl;
+
+    @Value("${cfg.baseUrl:http://180.76.119.15}")
+    private String baseUrl;
 
     /**
      * 入口逻辑
@@ -301,85 +301,46 @@ public class MsgHandler {
     }
 
     /**
-     * 推文生成入口
-     * 1. 调用AI服务生成推文文本
-     * 2. 调用AI服务生成配图
-     * 3. 将推文内容入库
-     * 4. 上传图片到微信素材库获取media_id
-     * 5. 通过图片+文本消息回复给用户
+     * 推文生成入口（秒回 + 异步生成）
+     * 幂等控制：基于微信MsgId去重，同一消息只处理一次
+     *
+     * 1. 幂等判断：若该MsgId已处理过，直接返回已有结果
+     * 2. 先入库一条"生成中"状态的任务记录（占用MsgId）
+     * 3. 立即返回"正在生成"提示给用户（5秒内响应微信）
+     * 4. 异步执行AI文本生成、图片生成、图片保存等耗时操作
      */
     public String handlePostGeneration(MsgEntity entity, String theme, String imageDesc) {
-        try {
-            // 1. 生成推文文本，格式：标题\n正文\n标签
-            String textResult = contentGenerateService.generateText(theme);
-            String[] parts = textResult.split("\n");
-            String title = "推文";
-            String tags = parts[parts.length-1];
+        String msgId = entity.getMsgId();
 
-            // 2. 生成配图
-            byte[] imageBytes = contentGenerateService.generateImage(imageDesc);
-
-            // 3. 入库
-            PostTask task = new PostTask();
-            task.setTitle(title);
-            task.setContent(textResult);
-            task.setTags(tags);
-            task.setTheme(theme);
-            postTaskService.createTask(task);
-
-            // 4. 上传图片到微信素材库（有图片时）
-            String mediaId = null;
-            if(imageBytes != null && imageBytes.length > 0) {
-                mediaId = uploadImageBytes(imageBytes, title);
+        // 1. 幂等判断：该消息是否已处理过
+        PostTask existingTask = postTaskService.queryByMsgId(msgId);
+        if (existingTask != null) {
+            logger.info("重复消息, msgId={}, 跳过处理", msgId);
+            // 已完成的任务返回文章链接，否则提示生成中
+            if (existingTask.getStatus() == PostTask.STATUS_COMPLETED) {
+                String articleUrl = baseUrl + "/article/" + existingTask.getId();
+                return buildTextMessage(entity, "推文已生成！点击查看：" + articleUrl);
             }
-
-            // 5. 回复用户：先发图片再发文本
-            StringBuilder reply = new StringBuilder();
-            reply.append("推文已生成并保存：\n");
-            reply.append("标题：").append(title).append("\n");
-            reply.append("正文：").append(textResult).append("\n");
-            reply.append("标签：").append(tags).append("\n\n");
-            reply.append("长按保存图片后可直接发布到小红书哦~");
-
-            // 有图片时返回图片消息（微信被动回复只能返回一条消息）
-            if(mediaId != null) {
-                return buildImageMessageByMediaId(entity, mediaId);
-            }
-            return buildTextMessage(entity, reply.toString());
-        } catch (Exception e) {
-            logger.error("推文生成失败, theme={}", theme, e);
-            return buildTextMessage(entity, "推文生成失败，请稍后再试");
+            return buildTextMessage(entity, "推文正在生成中，请稍后查看");
         }
-    }
 
-    /**
-     * 上传图片字节数组到微信素材库
-     */
-    private String uploadImageBytes(byte[] imageBytes, String name) {
-        try {
-            String token = tokenService.getAccessToken();
-            String url = "https://api.weixin.qq.com/cgi-bin/material/add_material?access_token=" + token + "&type=image";
+        // 2. 先入库一条"生成中"状态的占位记录（利用唯一索引防并发）
+        PostTask task = new PostTask();
+        task.setMsgId(msgId);
+        task.setTitle("推文");
+        task.setContent("");
+        task.setTheme(theme);
+        task.setStatus(PostTask.STATUS_GENERATING);
+        Long taskId = postTaskService.createTask(task);
 
-            HttpHeaders headers = new HttpHeaders();
-            headers.setContentType(MediaType.MULTIPART_FORM_DATA);
-            MultiValueMap<String, Object> params = new LinkedMultiValueMap<>();
-            ByteArrayResource byteArrayResource = new ByteArrayResource(imageBytes) {
-                @Override
-                public String getFilename() {
-                    return name + ".png";
-                }
-            };
-            params.add("media", byteArrayResource);
-            HttpEntity<MultiValueMap<String, Object>> request = new HttpEntity<>(params, headers);
-            ResponseEntity<String> responseEntity = restTemplate.postForEntity(url, request, String.class);
-            String body = responseEntity.getBody();
-            logger.info("上传图片到微信素材库: {}", body);
-            JSONObject obj = JSONObject.parseObject(body);
-            return obj.getString("media_id");
-        } catch (Exception e) {
-            logger.error("上传图片到微信素材库失败", e);
-            return null;
-        }
+        // 3. 立即返回提示（确保5秒内响应微信）
+        String articleUrl = baseUrl + "/article/" + taskId;
+        String reply = "推文正在生成中，完成后可点击查看：" + articleUrl;
+
+        // 4. 异步执行耗时操作
+        postTaskService.doGenerateAsync(taskId, theme, imageDesc);
+
+        return buildTextMessage(entity, reply);
     }
 
     /**

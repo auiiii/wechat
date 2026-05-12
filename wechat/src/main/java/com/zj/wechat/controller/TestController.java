@@ -26,7 +26,7 @@ public class TestController {
         String result = null;
         try {
             MsgEntity entity = new MsgEntity();
-            result = msgHandler.handlePostGeneration(entity, theme, "无");
+            result = msgHandler.handlePostGeneration(entity, theme, "清晰");
             log.info("[IN-rsp]/func/test done");
         } catch (Exception e) {
             log.error("", e);

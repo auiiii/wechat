@@ -52,6 +52,9 @@ feign:
 cfg:
   appId: wx0634de833b901930
   appSecret: d48959c66143d3c8ea9c1b20b319f7fe
+  baseUrl: http://180.76.119.15:80
+  image:
+    savePath: ./images/post
   zhipu:
     apiKey: 123
     textModel: glm-5.1

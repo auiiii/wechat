@@ -4,10 +4,13 @@
 
     <resultMap id="BaseResultMap" type="com.zj.wechat.entity.PostTask">
         <result property="id" column="id" jdbcType="BIGINT"/>
+        <result property="msgId" column="msg_id" jdbcType="VARCHAR"/>
         <result property="title" column="title" jdbcType="VARCHAR"/>
         <result property="content" column="content" jdbcType="VARCHAR"/>
         <result property="tags" column="tags" jdbcType="VARCHAR"/>
         <result property="theme" column="theme" jdbcType="VARCHAR"/>
+        <result property="imageUrl" column="image_url" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="TINYINT"/>
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
         <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
     </resultMap>
@@ -28,8 +31,24 @@
     </select>
 
     <insert id="insert" keyProperty="id" useGeneratedKeys="true">
-        insert into post_task(title, content, tags, theme)
-        values (#{title}, #{content}, #{tags}, #{theme})
+        insert into post_task(msg_id, title, content, tags, theme, image_url, status)
+        values (#{msgId}, #{title}, #{content}, #{tags}, #{theme}, #{imageUrl}, #{status})
     </insert>
+
+    <update id="updateImageUrl">
+        update post_task set image_url = #{imageUrl} where id = #{id}
+    </update>
+
+    <update id="updateStatus">
+        update post_task set status = #{status} where id = #{id}
+    </update>
+
+    <update id="updateTaskContent">
+        update post_task set title = #{title}, content = #{content}, tags = #{tags} where id = #{id}
+    </update>
+
+    <select id="queryByMsgId" resultMap="BaseResultMap">
+        select * from post_task where msg_id = #{msgId}
+    </select>
 
 </mapper>

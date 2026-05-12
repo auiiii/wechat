@@ -88,6 +88,7 @@ public class ZhipuContentGenerateService implements ContentGenerateService {
 
             CreateImageRequest imageRequest = CreateImageRequest.builder()
                     .model(imageModel)
+                    .watermarkEnabled(false)
                     .prompt("小红书风格封面图，内容要求是：" + theme + "，图片风格要求色彩鲜艳，有氛围感，人物形象精致，可以适当用q版呆萌的人物形象，适合社交媒体分享")
                     .size("1024x1024")
                     .build();
