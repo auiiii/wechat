@@ -13,7 +13,7 @@ public class CrosConfig implements WebMvcConfigurer {
                 //.allowCredentials(true)
                 //放行哪些原始域
                 .allowedOrigins("*")
-                .allowedMethods("GET", "POST")
+                .allowedMethods("GET", "POST", "PUT")
                 .allowedHeaders("*")
                 .exposedHeaders("*");
     }

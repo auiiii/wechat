@@ -31,7 +31,6 @@ public class WeChatController {
     @GetMapping("wx")
     public Object verify(@RequestParam("signature") String signature, @RequestParam("timestamp") String timestamp,
                             @RequestParam("nonce") String nonce,  @RequestParam("echostr") String echostr) {
-        logger.info("[IN-req]/wechat/wx?signature:{},timestamp:{},nonce:{},echostr:{}",signature,timestamp,nonce,echostr);
         try {
             if (SignatureUtil.checkSignature(signature, timestamp, nonce)) {
                 //接入校验成功,返回随机字符串
@@ -69,7 +68,6 @@ public class WeChatController {
     @PostMapping(value = "uploadUrl", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public R<?> uploadUrl(@RequestParam(value = "file") MultipartFile file, @RequestParam("name") String name)
     {
-        logger.info("[IN-req]/wechat/uploadUrl?POST" + name);
         try {
             return R.ok(service.uploadFile(file, name));
         } catch (Exception e) {
@@ -86,7 +84,6 @@ public class WeChatController {
     @PostMapping("wx")
     public String handler(HttpServletRequest request)
     {
-        logger.info("[IN-req]/wechat/wx?POST");
         Map<String,Object> map = new HashMap<>();
         try
         {

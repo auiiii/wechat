@@ -1,7 +1,6 @@
 package com.zj.wechat.controller;
 
 import com.alibaba.excel.EasyExcel;
-import com.alibaba.fastjson.JSONObject;
 import com.zj.common.entity.R;
 import com.zj.wechat.config.CustomSheetWriteHandler;
 import com.zj.wechat.entity.WeChatMovie;
@@ -28,10 +27,8 @@ public class WeChatMovieController {
 
     @PostMapping("add")
     public R<?> addMovie(@RequestBody WeChatMovie body) {
-        LOGGER.info("[IN-req]/movie/add, req-body is:{}", JSONObject.toJSONString(body));
         try {
             service.insertMovie(body);
-            LOGGER.info("[IN-rsp]/movie/add done");
             return R.ok();
         } catch (Exception e) {
             LOGGER.error("", e);
@@ -42,11 +39,9 @@ public class WeChatMovieController {
     @PostMapping("update")
     public R<?> updateMovie(@RequestBody WeChatMovie body, @RequestParam("id")Long id)
     {
-        LOGGER.info("[IN-req]/movie/update,req-body is:{},id is:{}", JSONObject.toJSONString(body), id);
         try
         {
             service.updateMovie(body,id);
-            LOGGER.info("[IN-rsp]/music/update done");
             return R.ok();
         } catch (Exception e) {
             LOGGER.error("", e);
@@ -57,12 +52,10 @@ public class WeChatMovieController {
     @PostMapping("delete")
     public R<?> batchDelete(@RequestBody Map<String,Object> body)
     {
-        LOGGER.info("[IN-req]/movie/delete,req-body is:{}", JSONObject.toJSONString(body));
         try
         {
             List<Long> ids = (List<Long>) body.get("ids");
             service.batchDeleteMovie(ids);
-            LOGGER.info("[IN-rsp]/music/delete done");
             return R.ok();
         } catch (Exception e) {
             LOGGER.error("", e);
@@ -79,10 +72,8 @@ public class WeChatMovieController {
      */
     @GetMapping("list")
     public R<?> queryMovie(@RequestParam("limit")Long limit, @RequestParam(value = "keyWord", required = false)String keyWord) {
-        LOGGER.info("[IN-req]/movie/list,req-keyWord is:{}", keyWord);
         try {
             List<WeChatMovie> list = service.queryMovieList(limit, keyWord);
-            LOGGER.info("[IN-rsp]musics/list,rsp is {}", JSONObject.toJSONString(list));
             return R.ok(list);
         } catch (Exception e) {
             LOGGER.error("", e);
@@ -93,7 +84,6 @@ public class WeChatMovieController {
 
     @GetMapping("export")
     public void exportExcel(@RequestParam("limit")Long limit, @RequestParam(value = "keyWord", required = false)String keyWord, HttpServletResponse response) {
-        LOGGER.info("[IN-req]/movie/export,req-keyWord is:{}", keyWord);
         try {
             List<WeChatMovie> list = service.queryMovieList(limit, keyWord);
             // 1. 设置响应类型为 Excel（.xlsx）
@@ -117,6 +107,5 @@ public class WeChatMovieController {
             {
                 LOGGER.warn("", e);
             }
-            LOGGER.info("[IN-rsp]movie/export,done");
     }
 }

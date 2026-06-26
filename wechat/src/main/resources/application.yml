@@ -3,6 +3,12 @@ server:
 spring:
   main:
     allow-circular-references: true
+  servlet:
+    multipart:
+      # 单个文件最大大小
+      max-file-size: 20MB
+      # 整个请求最大大小（多文件场景含表单字段）
+      max-request-size: 50MB
   datasource:
     dynamic:
       p6spy: false
@@ -36,7 +42,7 @@ mybatis:
   # 指定 WeChatMediaInfoDao.xml 的位置
   mapper-locations: classpath:mapper/*.xml
   #扫描实体类的位置,在此处指明扫描实体类的包，在 WeChatMediaInfoDao.xml 中就可以不写实体类的全路径名
-  type-aliases-package: com.zj.wechat.entity
+  type-aliases-package: com.zj.wechat.entity,com.zj.wechat.sportpal.entity
   configuration:
     #默认开启驼峰命名法，可以不用设置该属性
     map-underscore-to-camel-case: true
@@ -59,3 +65,12 @@ cfg:
     apiKey: 123
     textModel: glm-5.1
     imageModel: glm-image
+  sportpal:
+    appId: wxc3a0e0b55a494e89
+    appSecret: 23b60506a477d667842e19e996106440
+    jwtSecret: sportpal-jwt-secret-key-2024-prod
+    # 文件存储根目录
+    # 本地 Windows 调测建议绝对路径，如: D:/data/uploads/sportpal
+    # Docker 部署建议挂载卷路径，如: /data/uploads/sportpal
+    # 末尾不要带斜杠，程序内部统一拼接
+    uploadPath: ${user.dir}/uploads/sportpal

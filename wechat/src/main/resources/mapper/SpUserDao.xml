@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zj.wechat.entity.sportal.SpUserDao">
+
+    <resultMap id="BaseResultMap" type="com.zj.wechat.entity.sportal.SpUser">
+        <result property="id" column="id" jdbcType="BIGINT"/>
+        <result property="openId" column="open_id" jdbcType="VARCHAR"/>
+        <result property="username" column="username" jdbcType="VARCHAR"/>
+        <result property="nickname" column="nickname" jdbcType="VARCHAR"/>
+        <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
+        <result property="phone" column="phone" jdbcType="VARCHAR"/>
+        <result property="passwordHash" column="password_hash" jdbcType="VARCHAR"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO sp_users (open_id, username, nickname, avatar, phone, password_hash)
+        VALUES (#{openId}, #{username}, #{nickname}, #{avatar}, #{phone}, #{passwordHash})
+    </insert>
+
+    <select id="queryById" resultMap="BaseResultMap">
+        SELECT * FROM sp_users WHERE id = #{id}
+    </select>
+
+    <select id="queryByOpenId" resultMap="BaseResultMap">
+        SELECT * FROM sp_users WHERE open_id = #{openId}
+    </select>
+
+    <select id="queryByUsername" resultMap="BaseResultMap">
+        SELECT * FROM sp_users WHERE username = #{username}
+    </select>
+
+    <select id="queryByPhone" resultMap="BaseResultMap">
+        SELECT * FROM sp_users WHERE phone = #{phone}
+    </select>
+
+    <update id="updateProfile">
+        UPDATE sp_users
+        <set>
+            <if test="nickname != null and nickname != ''">
+                nickname = #{nickname},
+            </if>
+            <if test="avatar != null and avatar != ''">
+                avatar = #{avatar},
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <select id="countFeedsByUserId" resultType="int">
+        SELECT COUNT(*) FROM sp_feeds WHERE user_id = #{userId}
+    </select>
+
+    <select id="countCheckinsByUserId" resultType="int">
+        SELECT COUNT(*) FROM sp_checkins WHERE user_id = #{userId}
+    </select>
+
+    <select id="countLikesReceivedByUserId" resultType="int">
+        SELECT COUNT(*) FROM sp_feed_likes l
+        INNER JOIN sp_feeds f ON l.feed_id = f.id
+        WHERE f.user_id = #{userId}
+    </select>
+
+</mapper>

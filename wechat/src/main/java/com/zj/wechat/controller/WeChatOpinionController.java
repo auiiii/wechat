@@ -1,6 +1,5 @@
 package com.zj.wechat.controller;
 
-import com.alibaba.fastjson.JSONObject;
 import com.zj.common.entity.R;
 import com.zj.wechat.entity.ArticleNewsItem;
 import com.zj.wechat.entity.WeChatOpinion;
@@ -27,10 +26,8 @@ public class WeChatOpinionController {
 
     @PostMapping("/opinion/submit")
     public R<?> addOpinion(@RequestBody WeChatOpinion body) {
-        LOGGER.info("[IN-req]/opinion/submit, req-body is:{}", JSONObject.toJSONString(body));
         try {
             service.insertOpinion(body);
-            LOGGER.info("[IN-rsp]/opinion/submit done");
             return R.ok();
         } catch (Exception e) {
             LOGGER.error("", e);
@@ -47,10 +44,8 @@ public class WeChatOpinionController {
      */
     @GetMapping("/opinion/list")
     public R<?> queryList() {
-        LOGGER.info("[IN-req]/opinion/list");
         try {
             List<String> list = service.queryOpinionList();
-            LOGGER.info("[IN-rsp]opinion/list,rsp is {}", JSONObject.toJSONString(list));
             return R.ok(list);
         } catch (Exception e) {
             LOGGER.error("", e);
@@ -60,10 +55,8 @@ public class WeChatOpinionController {
 
     @PostMapping("/money/submit")
     public R<?> submitEmail(@RequestBody Map<String,Object> map) {
-        LOGGER.info("[IN-req]/money/submit:{}", JSONObject.toJSONString(map));
         try {
             service.submitEmail(map);
-            LOGGER.info("[IN-rsp]money/submit, done");
             return R.ok();
         } catch (Exception e) {
             LOGGER.error("", e);
@@ -73,10 +66,8 @@ public class WeChatOpinionController {
 
     @PostMapping("/article/submit")
     public R<?> submitArticle(@RequestBody Map<String,Object> map) {
-        LOGGER.info("[IN-req]/article/submit:{}", JSONObject.toJSONString(map));
         try {
             service.submitArticle(map);
-            LOGGER.info("[IN-rsp]article/submit, done");
             return R.ok();
         } catch (Exception e) {
             LOGGER.error("", e);
@@ -86,10 +77,8 @@ public class WeChatOpinionController {
 
     @GetMapping("/article/list")
     public R<?> articleList(){
-        LOGGER.info("[IN-req]/article/list:{}");
         try {
             List<ArticleNewsItem> list = weChatService.getArticle();
-            LOGGER.info("[IN-rsp]article/list,{}", JSONObject.toJSONString(list));
             return R.ok(list);
         } catch (Exception e) {
             LOGGER.error("", e);

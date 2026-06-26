@@ -40,7 +40,7 @@ public class AutoReadWriteSplittingConfig {
     @Bean
     public Advisor dsAdviceAdvisor(DynamicDatasourceNamedInterceptor dsAdvice) {
         AspectJExpressionPointcut pointcut = new AspectJExpressionPointcut();
-        pointcut.setExpression("execution (* com.zj.wechat.service.*.*(..))");
+        pointcut.setExpression("execution (* com.zj.wechat..service..*.*(..))");
         return new DefaultPointcutAdvisor(pointcut, dsAdvice);
     }
 

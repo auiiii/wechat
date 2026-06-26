@@ -1,8 +1,5 @@
 package com.zj.wechat.controller;
 
-import com.alibaba.fastjson.JSONObject;
-import com.zj.common.entity.R;
-import com.zj.wechat.service.FuncService;
 import com.zj.wechat.service.WeChatService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
@@ -35,42 +32,12 @@ public class FunctionController {
     @Resource
     WeChatService service;
 
-    @Resource
-    FuncService funcService;
-
     @Value("${cfg.gprTokenL:123}")
     private String gprToken;
 
-    /**
-     *  调用chatGpr生成一篇doc
-     * @param map
-     * @return
-     */
-    @PostMapping("chatGpr")
-    public R<?> handler(@RequestBody Map<String,Object> map)
-    {
-        log.info("[IN-req]/func/chatGpr,reqBody is {}", JSONObject.toJSONString(map));
-        try
-        {
-            Map<String,Object> result = funcService.createDoc(map);
-            log.info("[IN-rsp]/func/chatGpr");
-            return R.ok(result);
-        }
-        catch (Exception ex)
-        {
-            log.error("", ex);
-            return R.fail();
-        }
-    }
 
-    /**
-     *  调用chatGpr生成一篇doc
-     * @param reqBody
-     * @return
-     */
     @PostMapping("downloadDoc")
     public void downloadDoc(@RequestBody Map<String,Object>reqBody, HttpServletResponse response) throws IOException {
-        log.info("[IN-req]/func/downloadDoc");
         BufferedReader reader = null;
         OutputStream os = null;
         try
@@ -103,7 +70,6 @@ public class FunctionController {
             document.write(os);
             os.flush();
             os.close();
-            log.info("[IN-rsp]/wechat/downloadDoc");
         }
         catch (Exception ex)
         {
@@ -129,7 +95,6 @@ public class FunctionController {
     @PostMapping("downloadZip")
     public void downloadFile(HttpServletResponse response, @RequestBody Map<String, Object> params)
     {
-        log.info("[IN-req]/func/downloadZip,req-body is:{}", JSONObject.toJSONString(params));
         try
         {
             List<String> nameList = new ArrayList<>();
@@ -140,7 +105,6 @@ public class FunctionController {
             }
             //List<byte[]> list = service.getFileByteList(params);
             //ZipOutUtils.toZip(response,list,nameList);
-            log.info("[IN-rsp]/func/downloadZip done");
         }
         catch(Exception ex)
         {
@@ -158,10 +122,8 @@ public class FunctionController {
     @PostMapping(value = "ysPic", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public void ysPic(HttpServletResponse response, @RequestParam(value = "file") MultipartFile file, @RequestParam("size") Long size)
     {
-        log.info("[IN-req]/func/ysPic?POST");
         try {
             service.ysPic(response, file, size*1024);
-            log.info("[IN-rsp]/func/ysPic done");
         } catch (Exception e) {
             log.error("压缩失败", e);
         }

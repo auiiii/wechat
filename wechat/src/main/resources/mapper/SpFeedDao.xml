@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zj.wechat.entity.sportal.SpFeedDao">
+
+    <resultMap id="BaseResultMap" type="com.zj.wechat.entity.sportal.SpFeed">
+        <result property="id" column="id" jdbcType="BIGINT"/>
+        <result property="userId" column="user_id" jdbcType="BIGINT"/>
+        <result property="exerciseType" column="exercise_type" jdbcType="VARCHAR"/>
+        <result property="content" column="content" jdbcType="VARCHAR"/>
+        <result property="images" column="images" jdbcType="VARCHAR"/>
+        <result property="locationName" column="location_name" jdbcType="VARCHAR"/>
+        <result property="likes" column="likes" jdbcType="INTEGER"/>
+        <result property="commentCount" column="comment_count" jdbcType="INTEGER"/>
+        <result property="viewCount" column="view_count" jdbcType="INTEGER"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO sp_feeds (user_id, exercise_type, content, images, location_name)
+        VALUES (#{userId}, #{exerciseType}, #{content}, #{images}, #{locationName})
+    </insert>
+
+    <select id="queryById" resultMap="BaseResultMap">
+        SELECT * FROM sp_feeds WHERE id = #{id}
+    </select>
+
+    <select id="queryFeedList" resultMap="BaseResultMap">
+        SELECT * FROM sp_feeds
+        ORDER BY created_at DESC
+        LIMIT #{offset}, #{limit}
+    </select>
+
+    <select id="queryByUserId" resultMap="BaseResultMap">
+        SELECT * FROM sp_feeds
+        WHERE user_id = #{userId}
+        ORDER BY created_at DESC
+        LIMIT #{offset}, #{limit}
+    </select>
+
+    <update id="incrementLikes">
+        UPDATE sp_feeds SET likes = likes + 1 WHERE id = #{id}
+    </update>
+
+    <update id="decrementLikes">
+        UPDATE sp_feeds SET likes = GREATEST(likes - 1, 0) WHERE id = #{id}
+    </update>
+
+    <update id="incrementCommentCount">
+        UPDATE sp_feeds SET comment_count = comment_count + 1 WHERE id = #{id}
+    </update>
+
+    <update id="incrementViewCount">
+        UPDATE sp_feeds SET view_count = view_count + 1 WHERE id = #{id}
+    </update>
+
+    <delete id="deleteById">
+        DELETE FROM sp_feeds WHERE id = #{id} AND user_id = #{userId}
+    </delete>
+
+</mapper>

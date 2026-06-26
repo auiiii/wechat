@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zj.wechat.entity.sportal.SpFeedCommentDao">
+
+    <resultMap id="BaseResultMap" type="com.zj.wechat.entity.sportal.SpFeedComment">
+        <result property="id" column="id" jdbcType="BIGINT"/>
+        <result property="feedId" column="feed_id" jdbcType="BIGINT"/>
+        <result property="userId" column="user_id" jdbcType="BIGINT"/>
+        <result property="content" column="content" jdbcType="VARCHAR"/>
+        <result property="likes" column="likes" jdbcType="INTEGER"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO sp_feed_comments (feed_id, user_id, content)
+        VALUES (#{feedId}, #{userId}, #{content})
+    </insert>
+
+    <select id="queryByFeedId" resultMap="BaseResultMap">
+        SELECT * FROM sp_feed_comments
+        WHERE feed_id = #{feedId}
+        ORDER BY created_at ASC
+    </select>
+
+    <update id="incrementLikes">
+        UPDATE sp_feed_comments SET likes = likes + 1 WHERE id = #{id}
+    </update>
+
+    <update id="decrementLikes">
+        UPDATE sp_feed_comments SET likes = GREATEST(likes - 1, 0) WHERE id = #{id}
+    </update>
+
+    <delete id="deleteById">
+        DELETE FROM sp_feed_comments WHERE id = #{id} AND user_id = #{userId}
+    </delete>
+
+</mapper>

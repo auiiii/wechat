@@ -22,12 +22,10 @@ public class TestController {
     @PostMapping(value = "test")
     public String test(@RequestParam("theme") String theme)
     {
-        log.info("[IN-req]/func/test?POST");
         String result = null;
         try {
             MsgEntity entity = new MsgEntity();
             result = msgHandler.handlePostGeneration(entity, theme, "清晰");
-            log.info("[IN-rsp]/func/test done");
         } catch (Exception e) {
             log.error("", e);
         }

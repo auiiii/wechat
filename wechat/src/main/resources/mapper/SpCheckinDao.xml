@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zj.wechat.entity.sportal.SpCheckinDao">
+
+    <resultMap id="BaseResultMap" type="com.zj.wechat.entity.sportal.SpCheckin">
+        <result property="id" column="id" jdbcType="BIGINT"/>
+        <result property="userId" column="user_id" jdbcType="BIGINT"/>
+        <result property="exerciseType" column="exercise_type" jdbcType="VARCHAR"/>
+        <result property="images" column="images" jdbcType="VARCHAR"/>
+        <result property="locationName" column="location_name" jdbcType="VARCHAR"/>
+        <result property="note" column="note" jdbcType="VARCHAR"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO sp_checkins (user_id, exercise_type, images, location_name, note)
+        VALUES (#{userId}, #{exerciseType}, #{images}, #{locationName}, #{note})
+    </insert>
+
+    <select id="queryByUserId" resultMap="BaseResultMap">
+        SELECT * FROM sp_checkins
+        WHERE user_id = #{userId}
+        ORDER BY created_at DESC
+        LIMIT #{offset}, #{limit}
+    </select>
+
+    <select id="countTodayByUserId" resultType="int">
+        SELECT COUNT(*) FROM sp_checkins
+        WHERE user_id = #{userId}
+          AND DATE(created_at) = CURDATE()
+    </select>
+
+</mapper>
