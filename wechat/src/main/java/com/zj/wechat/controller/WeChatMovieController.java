@@ -4,7 +4,7 @@ import com.alibaba.excel.EasyExcel;
 import com.zj.common.entity.R;
 import com.zj.wechat.config.CustomSheetWriteHandler;
 import com.zj.wechat.entity.WeChatMovie;
-import com.zj.wechat.pojo.MovieExportDTO;
+import com.zj.wechat.dto.MovieExportDTO;
 import com.zj.wechat.service.ResourceService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

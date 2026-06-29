@@ -17,8 +17,6 @@
 - 中间件版本除了考虑版本兼容外，需要考虑是否有安全漏洞风险，比如log4j
 
 # 详细文档
-- 数据库设计详见docs/database.md
-- 需求及拆分步骤详见docs/task.md
+- 数据库设计详见wechat/src/main/resources/config/init.sql
 
-# 重要提示
-IMPORTANT: 整体方案需以uml格式生成我们的交互流程（存放在docs/下），包含前端、后端服务（网关、各个微服务）、中间件、第三方服务（RPC）等重要信息
+# 重要提示IMPORTANT: 整体方案需以uml格式生成我们的交互流程（存放在docs/下），包含前端、后端服务（网关、各个微服务）、中间件、第三方服务（RPC）等重要信息

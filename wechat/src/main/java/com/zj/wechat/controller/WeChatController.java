@@ -3,7 +3,7 @@ package com.zj.wechat.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.zj.common.entity.R;
 import com.zj.wechat.service.WeChatService;
-import com.zj.wechat.util.SignatureUtil;
+import com.zj.wechat.utils.SignatureUtil;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;

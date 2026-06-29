@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.zj.wechat.entity.sportal.SpFeedLikeDao">
+<mapper namespace="com.zj.wechat.entity.sportpal.SpFeedLikeDao">
 
-    <resultMap id="BaseResultMap" type="com.zj.wechat.entity.sportal.SpFeedLike">
+    <resultMap id="BaseResultMap" type="com.zj.wechat.entity.sportpal.SpFeedLike">
         <result property="id" column="id" jdbcType="BIGINT"/>
         <result property="feedId" column="feed_id" jdbcType="BIGINT"/>
         <result property="userId" column="user_id" jdbcType="BIGINT"/>

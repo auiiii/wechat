@@ -2,7 +2,22 @@
   "permissions": {
     "allow": [
       "Bash(npx skills list:*)",
-      "Bash(npx skills find:*)"
+      "Bash(npx skills find:*)",
+      "Bash(mvn clean compile:*)",
+      "Bash(findstr:*)",
+      "Bash(mvn dependency:tree:*)",
+      "Bash(mvn:*)",
+      "Bash(jar tf:*)",
+      "Bash(dir:*)",
+      "Bash(javap:*)",
+      "Bash(tree:*)",
+      "Bash(ls:*)",
+      "Bash(test:*)",
+      "Bash(grep:*)",
+      "Bash(while read dir)",
+      "Bash(git mv:*)",
+      "Bash(git rm:*)",
+      "Bash(wc:*)"
     ]
   }
 }

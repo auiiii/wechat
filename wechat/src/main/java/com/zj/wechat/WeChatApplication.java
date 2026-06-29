@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @EnableTransactionManagement
-@MapperScan(basePackages = {"com.zj.wechat.entity", "com.zj.wechat.sportpal.entity"})
+@MapperScan(basePackages = {"com.zj.wechat.entity", "com.zj.wechat.entity.sportpal"})
 @EnableAsync
 @EnableDiscoveryClient
 @EnableFeignClients(basePackages = {"com.zj"})

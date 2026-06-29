@@ -2,7 +2,7 @@
 package com.zj.wechat.config;
 
 import com.zj.wechat.service.WeChatService;
-import com.zj.wechat.util.JsonFileUtil;
+import com.zj.wechat.utils.JsonFileUtil;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 

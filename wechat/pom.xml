@@ -90,11 +90,11 @@
             <version>5.2.3</version>
         </dependency-->
 
-        <!-- 多数据源 -->
+        <!-- Druid 连接池（spring-boot-starter 提供自动装配，绑定 spring.datasource.druid.* 配置） -->
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
-            <version>3.4.0</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.2.20</version>
         </dependency>
 
         <dependency>

@@ -2,7 +2,7 @@ package com.zj.wechat.config;
 
 import com.alibaba.fastjson.JSON;
 import com.zj.wechat.dto.ApiResponse;
-import com.zj.wechat.service.sportal.JwtService;
+import com.zj.wechat.service.sportpal.JwtService;
 import io.jsonwebtoken.Claims;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
