@@ -9,6 +9,8 @@ public class UserProfileVO {
     private int feedCount;
     private int checkinCount;
     private int likeCount;
+    /** 累计运动分钟数，来源于 sp_daily_logs.exercise_minutes 求和 */
+    private long totalExerciseMinutes;
     private String createdAt;
 
     public Long getUserId() {
@@ -73,5 +75,13 @@ public class UserProfileVO {
 
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public long getTotalExerciseMinutes() {
+        return totalExerciseMinutes;
+    }
+
+    public void setTotalExerciseMinutes(long totalExerciseMinutes) {
+        this.totalExerciseMinutes = totalExerciseMinutes;
     }
 }

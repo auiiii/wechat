@@ -27,7 +27,8 @@ public class CheckinController {
         try {
             Long userId = (Long) httpRequest.getAttribute("userId");
             CheckinVO vo = checkinService.checkin(userId, request.getExerciseType(),
-                    request.getImages(), request.getLocationName(), request.getNote());
+                    request.getImages(), request.getLocationName(), request.getNote(),
+                    request.getDuration());
             return ApiResponse.ok(vo);
         } catch (IllegalStateException e) {
             return ApiResponse.fail(e.getMessage());

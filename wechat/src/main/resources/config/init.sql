@@ -191,6 +191,25 @@ CREATE TABLE `sp_checkins` (
   KEY `idx_user_created` (`user_id`,`created_at`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='运动打卡表';
 
+/*Table structure for table `sp_daily_logs` */
+
+DROP TABLE IF EXISTS `sp_daily_logs`;
+
+CREATE TABLE `sp_daily_logs` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `user_id` bigint unsigned NOT NULL COMMENT '用户ID',
+  `log_date` date NOT NULL COMMENT '日志日期',
+  `calories` int unsigned NOT NULL DEFAULT '0' COMMENT '摄入卡路里(kcal)',
+  `protein` int unsigned NOT NULL DEFAULT '0' COMMENT '蛋白质(g)',
+  `fat` int unsigned NOT NULL DEFAULT '0' COMMENT '脂肪(g)',
+  `carbs` int unsigned NOT NULL DEFAULT '0' COMMENT '碳水化合物(g)',
+  `exercise_minutes` int unsigned NOT NULL DEFAULT '0' COMMENT '运动时长(分钟)',
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `updated_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_date` (`user_id`,`log_date`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='每日指标记录表';
+
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;

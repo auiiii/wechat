@@ -23,6 +23,9 @@ public class UserService {
     @Resource
     private SpUserDao spUserDao;
 
+    @Resource
+    private DailyLogService dailyLogService;
+
     public UserProfileVO getProfile(Long userId) {
         SpUser user = spUserDao.queryById(userId);
         if (user == null) {
@@ -37,6 +40,7 @@ public class UserService {
         vo.setFeedCount(spUserDao.countFeedsByUserId(userId));
         vo.setCheckinCount(spUserDao.countCheckinsByUserId(userId));
         vo.setLikeCount(spUserDao.countLikesReceivedByUserId(userId));
+        vo.setTotalExerciseMinutes(dailyLogService.totalExerciseMinutes(userId));
         vo.setCreatedAt(user.getCreatedAt() != null ? user.getCreatedAt().toString() : null);
         return vo;
     }

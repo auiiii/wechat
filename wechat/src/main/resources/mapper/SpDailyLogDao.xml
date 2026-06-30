@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zj.wechat.entity.sportpal.SpDailyLogDao">
+
+    <resultMap id="BaseResultMap" type="com.zj.wechat.entity.sportpal.SpDailyLog">
+        <result property="id" column="id" jdbcType="BIGINT"/>
+        <result property="userId" column="user_id" jdbcType="BIGINT"/>
+        <result property="logDate" column="log_date" jdbcType="DATE"/>
+        <result property="calories" column="calories" jdbcType="INTEGER"/>
+        <result property="protein" column="protein" jdbcType="INTEGER"/>
+        <result property="fat" column="fat" jdbcType="INTEGER"/>
+        <result property="carbs" column="carbs" jdbcType="INTEGER"/>
+        <result property="exerciseMinutes" column="exercise_minutes" jdbcType="INTEGER"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--
+      部分合并 upsert：
+        - 首次插入：null 字段经 COALESCE 落库为 0；
+        - 命中已存在：入参为 null 的字段保持原列值，非 null 字段覆盖。
+      不使用 MySQL 8.0.20+ 已废弃的 VALUES(col) 写法，直接以入参判空。
+    -->
+    <insert id="upsert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO sp_daily_logs (user_id, log_date, calories, protein, fat, carbs, exercise_minutes)
+        VALUES (#{userId}, #{logDate},
+                COALESCE(#{calories}, 0),
+                COALESCE(#{protein}, 0),
+                COALESCE(#{fat}, 0),
+                COALESCE(#{carbs}, 0),
+                COALESCE(#{exerciseMinutes}, 0))
+        ON DUPLICATE KEY UPDATE
+            calories = IF(#{calories} IS NULL, calories, #{calories}),
+            protein = IF(#{protein} IS NULL, protein, #{protein}),
+            fat = IF(#{fat} IS NULL, fat, #{fat}),
+            carbs = IF(#{carbs} IS NULL, carbs, #{carbs}),
+            exercise_minutes = IF(#{exerciseMinutes} IS NULL, exercise_minutes, #{exerciseMinutes})
+    </insert>
+
+    <!--
+      打卡联动累加运动时长：仅动 exercise_minutes，饮食字段不碰。
+      首次插入为 minutes；命中已存在则在原值上累加 minutes。
+    -->
+    <insert id="addExerciseMinutes">
+        INSERT INTO sp_daily_logs (user_id, log_date, calories, protein, fat, carbs, exercise_minutes)
+        VALUES (#{userId}, #{logDate}, 0, 0, 0, 0, #{minutes})
+        ON DUPLICATE KEY UPDATE
+            exercise_minutes = exercise_minutes + #{minutes}
+    </insert>
+
+    <select id="queryByUserAndDate" resultMap="BaseResultMap">
+        SELECT id, user_id, log_date, calories, protein, fat, carbs, exercise_minutes, created_at, updated_at
+        FROM sp_daily_logs
+        WHERE user_id = #{userId} AND log_date = #{logDate}
+    </select>
+
+    <select id="queryRange" resultMap="BaseResultMap">
+        SELECT id, user_id, log_date, calories, protein, fat, carbs, exercise_minutes, created_at, updated_at
+        FROM sp_daily_logs
+        WHERE user_id = #{userId}
+          AND log_date BETWEEN #{fromDate} AND #{toDate}
+        ORDER BY log_date ASC
+    </select>
+
+    <select id="sumExerciseMinutes" resultType="java.lang.Long">
+        SELECT COALESCE(SUM(exercise_minutes), 0) FROM sp_daily_logs WHERE user_id = #{userId}
+    </select>
+
+</mapper>

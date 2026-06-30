@@ -8,6 +8,8 @@ public class CheckinRequest {
     private List<String> images;
     private String locationName;
     private String note;
+    /** 本次运动时长（分钟），用于联动写入每日指标 exercise_minutes */
+    private Integer duration;
 
     public String getExerciseType() {
         return exerciseType;
@@ -39,5 +41,13 @@ public class CheckinRequest {
 
     public void setNote(String note) {
         this.note = note;
+    }
+
+    public Integer getDuration() {
+        return duration;
+    }
+
+    public void setDuration(Integer duration) {
+        this.duration = duration;
     }
 }

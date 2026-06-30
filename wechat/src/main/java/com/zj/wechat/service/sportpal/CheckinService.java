@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.time.LocalDate;
 import java.util.*;
 
 @Service
@@ -21,14 +22,14 @@ public class CheckinService {
     @Resource
     private SpCheckinDao spCheckinDao;
 
+    @Resource
+    private DailyLogService dailyLogService;
+
     @Transactional
     public CheckinVO checkin(Long userId, String exerciseType, List<String> images,
-                             String locationName, String note) {
-        int todayCount = spCheckinDao.countTodayByUserId(userId);
-        if (todayCount > 0) {
-            throw new IllegalStateException("今天已经打卡过了");
-        }
-
+                             String locationName, String note, Integer duration) {
+        // 一天内允许多次打卡（如先跑步后游泳），每次打卡单独入库，
+        // 运动时长在 daily_log 上累加，不相互覆盖。
         SpCheckin checkin = new SpCheckin();
         checkin.setUserId(userId);
         checkin.setExerciseType(exerciseType);
@@ -37,6 +38,11 @@ public class CheckinService {
         checkin.setNote(note);
 
         spCheckinDao.insert(checkin);
+
+        // 联动：累加今日运动时长到 daily_log，饮食字段保留原值
+        if (duration != null && duration > 0) {
+            dailyLogService.addExerciseMinutes(userId, LocalDate.now(), duration);
+        }
         return toCheckinVO(checkin);
     }
 
